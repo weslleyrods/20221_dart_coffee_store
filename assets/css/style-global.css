@@ -1,3 +1,11 @@
+*{
+  outline: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
 :root {
   --eerie-black: #1e1e1eff;
   --deep-jungle-green: #204d48ff;
@@ -6,3 +14,16 @@
   --gold-metallic: #d8b564ff;
   --dark-liver-horses: #5c413aff;
 }
+
+.eerie-black{
+  background-color: var(--eerie-black);
+}
+.dark-slate-gray{
+  background-color: var(--dark-slate-gray);
+}
+
+.gold-metallic{
+  background-color: var(--gold-metallic);
+}
+
+
