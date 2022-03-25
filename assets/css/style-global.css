@@ -1,10 +1,8 @@
-*{
+* {
   outline: none;
   margin: 0;
   padding: 0;
-  
 }
-
 
 :root {
   --eerie-black: #1e1e1eff;
@@ -15,7 +13,6 @@
   --dark-liver-horses: #5c413aff;
 }
 
-<<<<<<< HEAD
 .dark-slate-gray {
   background-color: #3a555cff;
 }
@@ -27,17 +24,13 @@
 .deep-jungle-green {
   background-color: #204d48ff;
 }
-=======
-.eerie-black{
+.eerie-black {
   background-color: var(--eerie-black);
 }
-.dark-slate-gray{
+.dark-slate-gray {
   background-color: var(--dark-slate-gray);
 }
 
-.gold-metallic{
+.gold-metallic {
   background-color: var(--gold-metallic);
 }
-
-
->>>>>>> origin/dev-weslley
