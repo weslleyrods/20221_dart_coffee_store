@@ -87,55 +87,56 @@
                             <div class="row px-3">
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <label for="nome" class="form-label text-white"></label>
-                                    <input type="text" id="nome" name="nome" class="form-control"
-                                    placeholder="nome*"/>
+                                    <input type="text" pattern="([aA-zZ]+)" id="txtNome" name="nome" class="form-control"
+                                    placeholder="Nome" required/>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <label for="sobrenome" class="form-label text-white"></label>
-                                    <input type="text" id="sobrenome" name="sobrenome" class="form-control"
-                                    placeholder="sobrenome*" />
+                                    <input type="text" pattern="([aA-zZ]+)" id="txtSobrenome" name="sobrenome" class="form-control"
+                                    placeholder="Sobrenome"required/>
                                 </div>
                             </div>                            
             <!--CPF - 1 bloco longo-->                             
                             <div class="row px-3">
                                 <div class="col-12 ">
                                 <label for="CPF" class="form-label text-white"></label>
-                                <input type="text" id="CPF" name="CPF" class="form-control"
-                                placeholder="CPF*"/>
+                                <input type="text" pattern="[0-9]+$" id="txtCPF" name="CPF" class="form-control"
+                                placeholder="CPF" maxlength="11" required/>
                                 </div>
                             </div>
             <!--email - 1 bloco longo-->                            
                             <div class="row px-3">
                                 <div class="col-12">
                                 <label for="email" class="form-label text-white"></label>
-                                <input type="text" id="email" name="email" class="form-control"
-                                placeholder="exemplo@email.com " />
+                                <input type="email" id="txtEmail" name="email" class="form-control"
+                                placeholder="exemplo@email.com"required/>
                                 </div>
                             </div>
             <!--SENHA & CONFIRMAR SENHA - 2 blocos -->  
                             <div class="row px-3">
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <label for="senha" class="form-label text-white"></label>
-                                    <input type="text" id="senha" name="senha" class="form-control"
-                                    placeholder="senha"/>
+                                    <input type="password" id="txtSenha" name="senha" class="form-control"
+                                    placeholder="senha"required/>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <label for="confirmSenha" class="form-label text-white"></label>
-                                    <input type="text" id="confirmSenha" name="confirmSenha" class="form-control"
-                                    placeholder="Confirmar senha*" />
+                                    <input type="password" id="txtConfirmSenha" name="confirmSenha" class="form-control"
+                                    placeholder="Confirmar senha" required/>
                                 </div>
                             </div>                                    
             <!--telefone & Celular - 2 blocos -->  
                             <div class="row px-3">
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <label for="telefone" class="form-label text-white"></label>
-                                    <input type="text" id="telefone" name="telefone" class="form-control"
-                                    placeholder="Telefone"/>
+                                    <input type="tel" pattern="[0-9]+$" id="txtTelefone" name="telefone" 
+                                    class="form-control" placeholder="Telefone (xx-xxxx-xxxx)" maxlength="10" />
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-6">
                                     <label for="celular" class="form-label text-white"></label>
-                                    <input type="text" id="celular" name="celular" class="form-control"
-                                    placeholder="Celular*" />
+                                    <input type="tel" pattern="[0-9]+$" id="txtCelular" name="celular" 
+                                    class="form-control" placeholder="Celular (xx-xxxxx-xxxx)"  
+                                    maxlength="11"/>
                                 </div>
                             </div>
             <!--Fim -->                                          
@@ -158,93 +159,6 @@
                 </div>
             </div>
         </div>
-    <!--
-    <!-
-    
-                                    ORIGINAL
-
-<style>
-    .formulario {
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .formulario .formulario-campos {
-        height: 75%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: var(--eerie-black);
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-    .formulario .formulario-campos form {
-        flex-direction: column;
-        text-align: left;
-    }
-    .formulario .formulario-imagem {   
-        height: 75%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-image: url("../assets/img/saco-cafe.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-    }
-    @media screen and (max-width: 992px) {
-        .formulario .formulario-imagem {
-            display: none;
-        }
-        .formulario .formulario-campos {
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-        }
-    }
-</style>
-<div class="container">
-    <div class="row formulario">
-        <div class="formulario-campos col-md-12 col-lg-8">
-            <div class="row">
-                <h1 class="titulo text-white">Cadastro</h1>  
-                <form class="d-flex">
-                    <div class="row px-3">
-                        <label for="email" class="form-label text-white">E-mail</label>
-                        <input type="text" id="email" name="email" class="form-control"
-                            placeholder="exemplo@email.com " />
-                    </div>
-                    <div class="row px-3 mt-3">
-                        <label for="senha" class="form-label rotulo text-white">Senha</label>
-                        <input type="password" id="senha" name="senha" class="form-control"
-                            placeholder="digite sua senha" />
-                    </div>
-                    <div class="row mt-2 px-3">
-                        <a href="" class="text-left text-white">
-                            Esqueci minha senha
-                        </a>
-                    </div>
-                    <div class="row px-5 mt-5">
-                        <button class="btn btn-success dark-slate-gray">ENTRAR</button>
-                    </div>
-                    <div class="row mt-3">
-                        <a href="" class="text-center text-white p-2">
-                            Não possui cadastro?
-                        </a>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="formulario-imagem col">
-        </div>
-    </div>
-</div>  
--->
-
     </body>
     
     </html>
