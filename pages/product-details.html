@@ -21,12 +21,16 @@
     <link rel="stylesheet" href="../assets/css/style-global.css">
 </head>
 
-<body>
+<body class="deep-jungle-green ">
 
     <style>
         /* .carousel .carousel-inner .carousel-item img {
             max-width: 600px;
         } */
+
+        .container .col-md-12 .row {
+            flex-direction: row-reverse;
+        }
 
         .image-indicators {
             /* background-color: aqua; */
@@ -106,7 +110,8 @@
         }
 
         #descricao .descricao-texto {
-            background-color: rgba(32, 77, 72, .7);
+            background-color: rgba(35, 50, 55, .7);
+
             border-radius: 15px;
             margin: 0 10px;
         }
@@ -116,15 +121,143 @@
             color: #fff;
             font-size: 1.25rem;
         }
+
+        #informacoes {
+            padding: 20px;
+        }
+
+        #informacoes h1 {
+            color: #FFF;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        #informacoes .avaliacao {
+            display: flex;
+            width: 40%;
+        }
+
+        #informacoes .avaliacao i {
+            font-size: 1.25rem;
+            color: var(--gold-metallic);
+        }
+
+        #informacoes #preco {
+            font-weight: 100;
+        }
+
+        #informacoes .notas {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #informacoes .notas .nota {
+            margin-bottom: 10px;
+        }
+
+        #informacoes .notas .nota p {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        #informacoes .notas .nota .pontos {
+            width: 60%;
+            background-color: var(--eerie-black);
+            height: 15px;
+            border-radius: 10px;
+            padding: 5px;
+            display: flex;
+        }
+
+        #informacoes .notas .nota .ponto {
+            background-color: #fff;
+            width: calc(100% / 10);
+            height: 5px;
+            border-radius: 100px;
+            margin: 0px 2px;
+        }
+
+        @media screen and (min-width: 768px) {
+            #informacoes {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            #botao {
+                margin: -5% 0px;
+            }
+        }
     </style>
 
     <div class="container">
-        <div class="col-12">
+        <div class="col-12 col-md-12">
             <div class="row">
-                <div id="informacoes" class="col-12 bg-success">
-                    <h1 class="">Café aramaico do norte moida a mão por virgem libanesas</h1>
+                <div id="informacoes" class="col-12 col-md-5">
+                    <h1>Nome Produto</h1>
+                    <div class="avaliacao">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <h1 id="preco">R$ 57,97</h1>
+                    <div class="notas">
+                        <div class="nota">
+                            <p>Torra</p>
+                            <div class="pontos">
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                            </div>
+                        </div>
+                        <div class="nota">
+                            <p>Corpo</p>
+                            <div class="pontos">
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                            </div>
+                        </div>
+                        <div class="nota">
+                            <p>Amargor</p>
+                            <div class="pontos">
+                                <div class="ponto"></div>
+                            </div>
+                        </div>
+                        <div class="nota">
+                            <p>Acidez</p>
+                            <div class="pontos">
+                                <div class="ponto"></div>
+                            </div>
+                        </div>
+                        <div class="nota">
+                            <p>Aroma</p>
+                            <div class="pontos">
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                                <div class="ponto"></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div id="carousel" class="col-12">
+                <div id="carousel" class="col-12 col-md-7">
                     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
 
@@ -162,7 +295,7 @@
                     </div>
 
                 </div>
-                <div id="botao" class="col-12">
+                <div id="botao" class="col-12 col-md-5">
                     <div class="qtd-produto">
                         <i class="bi bi-dash-circle-fill"></i>
                         <label class="rotulo">1</label>
@@ -171,7 +304,7 @@
                     <button class="btn">Comprar</button>
                     <button class="btn btn-opacity">Adicionar ao carrinho</button>
                 </div>
-                <div id="descricao" class="col-12">
+                <div id="descricao" class="col-12 col-md-7">
                     <div class="descricao-texto">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
