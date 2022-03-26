@@ -41,9 +41,13 @@
                 border-top-left-radius: 30px;
                 border-bottom-left-radius: 30px;
             }
-            .formulario .formulario-campos form {
+            .formulario .formulario-campos form {  
                 flex-direction: column;
-                text-align: left;
+                text-align: center;            
+            }
+            .formulario .formulario-campos {  
+                flex-direction: column;
+                text-align: center;
             }
             .formulario .formulario-imagem {   
                 height: 75%;
@@ -58,12 +62,11 @@
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
             }
-
-            .row .form {
-                width: 50%;
-                
+                    
+            .btn-success {   
+                width: 100%;
             }
-
+            
             @media screen and (max-width: 992px) {
                 .formulario .formulario-imagem {
                     display: none;
@@ -82,12 +85,12 @@
                         <form class="d-flex">
             <!--NOME & sobrenome - 2 blocos curtos -->                               
                             <div class="row px-3">
-                                <div class="col-6">
+                                <div class="col-12 col-sm-12 col-md-6">
                                     <label for="nome" class="form-label text-white"></label>
-                                    <input type="text" id="cadas-nome" name="nome" class="form-control"
+                                    <input type="text" id="nome" name="nome" class="form-control"
                                     placeholder="nome*"/>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12 col-sm-12 col-md-6">
                                     <label for="sobrenome" class="form-label text-white"></label>
                                     <input type="text" id="sobrenome" name="sobrenome" class="form-control"
                                     placeholder="sobrenome*" />
@@ -95,7 +98,7 @@
                             </div>                            
             <!--CPF - 1 bloco longo-->                             
                             <div class="row px-3">
-                                <div class="col-12">
+                                <div class="col-12 ">
                                 <label for="CPF" class="form-label text-white"></label>
                                 <input type="text" id="CPF" name="CPF" class="form-control"
                                 placeholder="CPF*"/>
@@ -111,12 +114,12 @@
                             </div>
             <!--SENHA & CONFIRMAR SENHA - 2 blocos -->  
                             <div class="row px-3">
-                                <div class="col-6">
+                                <div class="col-12 col-sm-12 col-md-6">
                                     <label for="senha" class="form-label text-white"></label>
                                     <input type="text" id="senha" name="senha" class="form-control"
                                     placeholder="senha"/>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12 col-sm-12 col-md-6">
                                     <label for="confirmSenha" class="form-label text-white"></label>
                                     <input type="text" id="confirmSenha" name="confirmSenha" class="form-control"
                                     placeholder="Confirmar senha*" />
@@ -124,12 +127,12 @@
                             </div>                                    
             <!--telefone & Celular - 2 blocos -->  
                             <div class="row px-3">
-                                <div class="col-6">
+                                <div class="col-12 col-sm-12 col-md-6">
                                     <label for="telefone" class="form-label text-white"></label>
                                     <input type="text" id="telefone" name="telefone" class="form-control"
                                     placeholder="Telefone"/>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12 col-sm-12 col-md-6">
                                     <label for="celular" class="form-label text-white"></label>
                                     <input type="text" id="celular" name="celular" class="form-control"
                                     placeholder="Celular*" />
@@ -139,7 +142,7 @@
                             <div class="row px-3 mt-4">
                                 <div class="col-6">
                                 <a href="" class="text-left text-white">
-                                    Já possui cadastro? <br>Clique aqui
+                                    Já possui cadastro?<br>Clique aqui
                                 </a>
                                 </div>
                                 <div class="col-6">
