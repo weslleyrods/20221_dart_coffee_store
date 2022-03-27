@@ -2,9 +2,14 @@
 body{
     background-color: white;
 }
+
+
 .navbar{
     background-color: var(--eerie-black); 
-    
+}
+
+.navbar .navbar-toggler{
+    box-shadow: none;
 }
 
 .nav {
@@ -16,6 +21,10 @@ body{
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
+
+}
+.d-flex .btn{
+    box-shadow: none;
 }
 
 .offcanvas-header{
