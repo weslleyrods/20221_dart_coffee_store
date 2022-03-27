@@ -89,53 +89,51 @@
                             <div class="row px-3">
                                 <div class="col-12 col-sm-12 col-md-12">
                                     <label for="logradouro" class="form-label text-white"></label>
-                                    <input type="text" pattern="([aA-zZ]+)" id="txtLogradouro" name="logradouro" 
-                                    class="form-control" placeholder="Logradouro*"required/>
+                                    <input type="text" id="txtLogradouro" name="logradouro" 
+                                    class="form-control" placeholder="Logradouro"required/>
                                 </div>
                             </div>                            
             <!--numero -->  
                                 <div class="row px-3">
                                     <div class="col-12 col-sm-12 col-md-6">
-                                        <label for="senha" class="form-label text-white"></label>
-                                        <input type="password" id="txtSenha" name="senha" class="form-control"
-                                        placeholder="numero*"required/>
+                                        <label for="numero" class="form-label text-white"></label>
+                                        <input type="number" pattern="[0-9]+$" id="txtNumero" name="numero" 
+                                        class="form-control" placeholder="Numero"required/>
                                     </div>
                 <!--bairro-->  
                                     <div class="col-12 col-sm-12 col-md-6">
-                                        <label for="confirmSenha" class="form-label text-white"></label>
-                                        <input type="password" id="txtConfirmSenha" name="confirmSenha" class="form-control"
-                                        placeholder="bairro*" required/>
+                                        <label for="Bairro" class="form-label text-white"></label>
+                                        <input type="text" pattern="[aA-zZ\s]+$" id="txtBairro" name="bairro" class="form-control"
+                                        placeholder="Bairro" required/>
                                     </div>
                                 </div>                                    
-            <!--cidade & estado -->  
+            <!--cidade & estado -->
+                                                    <!-- maxlength="10" -->
                                     <div class="row px-3">
                                         <div class="col-12 col-sm-12 col-md-6">
-                                            <label for="telefone" class="form-label text-white"></label>
-                                            <input type="tel" pattern="[0-9]+$" id="txtTelefone" name="telefone" 
-                                            class="form-control" placeholder="cidade*" maxlength="10" />
+                                            <label for="cidade" class="form-label text-white"></label>
+                                            <input type="text" pattern="[aA-zZ\s]+$" id="txtCidade" name="cidade" 
+                                            class="form-control" placeholder="Cidade" required/>
                                         </div>
                                                 <div class="col-12 col-sm-12 col-md-6">
-                                                    <label for="celular" class="form-label text-white"></label>
-                                                    <input type="tel" pattern="[0-9]+$" id="txtCelular" name="celular" 
-                                                    class="form-control" placeholder="estado*"  
-                                                    maxlength="11"/>
+                                                    <label for="estado" class="form-label text-white"></label>
+                                                    <input type="text" pattern="[aA-zZ\s]+$" id="txtEstado" name="estado" 
+                                                    class="form-control" placeholder="Estado" required/>
                                                 </div>    
                                     </div>
                     <!--CEP-->  
+                    <!-- onkeydown="return" -->
                                 <div class="row px-3">
                                         <div class="col-6 col-sm-12 col-md-6">
-                                            <label for="celular" class="form-label text-white"></label>
-                                            <input type="tel" onkeydown="return" pattern="[0-9]+$" id="txtCelular" name="celular" 
-                                            class="form-control" placeholder="CEP"  
-                                            maxlength="11"/>
+                                            <label for="cep" class="form-label text-white"></label>
+                                            <input type="text"  pattern="[0-9]+$" id="txtCep" name="cep" 
+                                            class="form-control" placeholder="CEP" maxlength="8" required/>
                                         </div>           
                             <!--botão 1-->              
                                         <div class="col-6 col-sm-12 col-md-6">
                                                 <button class="btn btn-success dark-slate-gray">BUSCAR</button>
                                         </div>
                                 </div>            
-                            <!--link-->  
-
                                     <div class="row px-3 mt-1">
                                         <div class="col-6 mt-3 ">
                                             <a href="" class="text-left text-white">
