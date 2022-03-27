@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro</title>
+        <title>Endereço</title>
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,8 +17,6 @@
     
         <link rel="stylesheet" href="../assets/css/style-global.css">
     </head>
-
-    
     <body class="deep-jungle-green">
 
 
@@ -65,8 +63,12 @@
                     
             .btn-success {   
                 width: 100%;
+                margin-top: 25px;
+                height: 38px;
+                
+                
             }
-            
+
             @media screen and (max-width: 992px) {
                 .formulario .formulario-imagem {
                     display: none;
@@ -79,86 +81,80 @@
         </style>
         <div class="container">
             <div class="row formulario">
-                <div class="formulario-campos col-md-12 col-lg-8">
+                <div class="formulario-campos col-md-12 col-lg-8 ">
                     <div class="row">
-                        <h1 class="titulo text-white">Cadastro</h1>  
+                        <h1 class="titulo text-white">Endereço</h1>  
                         <form class="d-flex">
-            <!--NOME & sobrenome - 2 blocos curtos -->                               
+            <!--logradouro -->                               
                             <div class="row px-3">
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <label for="nome" class="form-label text-white"></label>
-                                    <input type="text" pattern="([aA-zZ]+)" id="txtNome" name="nome" class="form-control"
-                                    placeholder="Nome" required/>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <label for="sobrenome" class="form-label text-white"></label>
-                                    <input type="text" pattern="([aA-zZ]+)" id="txtSobrenome" name="sobrenome" class="form-control"
-                                    placeholder="Sobrenome"required/>
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <label for="logradouro" class="form-label text-white"></label>
+                                    <input type="text" pattern="([aA-zZ]+)" id="txtLogradouro" name="logradouro" 
+                                    class="form-control" placeholder="Logradouro*"required/>
                                 </div>
                             </div>                            
-            <!--CPF - 1 bloco longo-->                             
-                            <div class="row px-3">
-                                <div class="col-12 ">
-                                <label for="CPF" class="form-label text-white"></label>
-                                <input type="text" pattern="[0-9]+$" id="txtCPF" name="CPF" class="form-control"
-                                placeholder="CPF" maxlength="11" required/>
+            <!--numero -->  
+                                <div class="row px-3">
+                                    <div class="col-12 col-sm-12 col-md-6">
+                                        <label for="senha" class="form-label text-white"></label>
+                                        <input type="password" id="txtSenha" name="senha" class="form-control"
+                                        placeholder="numero*"required/>
+                                    </div>
+                <!--bairro-->  
+                                    <div class="col-12 col-sm-12 col-md-6">
+                                        <label for="confirmSenha" class="form-label text-white"></label>
+                                        <input type="password" id="txtConfirmSenha" name="confirmSenha" class="form-control"
+                                        placeholder="bairro*" required/>
+                                    </div>
+                                </div>                                    
+            <!--cidade & estado -->  
+                                    <div class="row px-3">
+                                        <div class="col-12 col-sm-12 col-md-6">
+                                            <label for="telefone" class="form-label text-white"></label>
+                                            <input type="tel" pattern="[0-9]+$" id="txtTelefone" name="telefone" 
+                                            class="form-control" placeholder="cidade*" maxlength="10" />
+                                        </div>
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <label for="celular" class="form-label text-white"></label>
+                                                    <input type="tel" pattern="[0-9]+$" id="txtCelular" name="celular" 
+                                                    class="form-control" placeholder="estado*"  
+                                                    maxlength="11"/>
+                                                </div>    
+                                    </div>
+                    <!--CEP-->  
+                                <div class="row px-3">
+                                        <div class="col-6 col-sm-12 col-md-6">
+                                            <label for="celular" class="form-label text-white"></label>
+                                            <input type="tel" onkeydown="return" pattern="[0-9]+$" id="txtCelular" name="celular" 
+                                            class="form-control" placeholder="CEP"  
+                                            maxlength="11"/>
+                                        </div>           
+                            <!--botão 1-->              
+                                        <div class="col-6 col-sm-12 col-md-6">
+                                                <button class="btn btn-success dark-slate-gray">BUSCAR</button>
+                                        </div>
+                                </div>            
+                            <!--link-->  
+
+                                    <div class="row px-3 mt-1">
+                                        <div class="col-6 mt-3 ">
+                                            <a href="" class="text-left text-white">
+                                                Já possui cadastro?<br>Clique aqui
+                                            </a>
+                                        </div>
+                                        <!--botão 2-->
+                                        <div class="col-6 ">
+                                                <button class="btn btn-success dark-slate-gray">CADASTRAR</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-            <!--email - 1 bloco longo-->                            
-                            <div class="row px-3">
-                                <div class="col-12">
-                                <label for="email" class="form-label text-white"></label>
-                                <input type="email" id="txtEmail" name="email" class="form-control"
-                                placeholder="exemplo@email.com"required/>
-                                </div>
-                            </div>
-            <!--SENHA & CONFIRMAR SENHA - 2 blocos -->  
-                            <div class="row px-3">
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <label for="senha" class="form-label text-white"></label>
-                                    <input type="password" id="txtSenha" name="senha" class="form-control"
-                                    placeholder="senha"required/>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <label for="confirmSenha" class="form-label text-white"></label>
-                                    <input type="password" id="txtConfirmSenha" name="confirmSenha" class="form-control"
-                                    placeholder="Confirmar senha" required/>
-                                </div>
-                            </div>                                    
-            <!--telefone & Celular - 2 blocos -->  
-                            <div class="row px-3">
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <label for="telefone" class="form-label text-white"></label>
-                                    <input type="tel" pattern="[0-9]+$" id="txtTelefone" name="telefone" 
-                                    class="form-control" placeholder="Telefone (xx-xxxx-xxxx)" maxlength="10" />
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6">
-                                    <label for="celular" class="form-label text-white"></label>
-                                    <input type="tel" pattern="[0-9]+$" id="txtCelular" name="celular" 
-                                    class="form-control" placeholder="Celular (xx-xxxxx-xxxx)"  
-                                    maxlength="11"/>
-                                </div>
-                            </div>
-            <!--Fim -->                                          
-                            <div class="row px-3 mt-4">
-                                <div class="col-6">
-                                <a href="" class="text-left text-white">
-                                    Já possui cadastro?<br>Clique aqui
-                                </a>
-                                </div>
-                                <div class="col-6">
-                                    <button class="btn btn-success dark-slate-gray">Proximo</button>
-                            </div>
+                                <div class="row px-1 mt-1">
+                            </form>
                         </div>
                     </div>
-                    <div class="row px-1 mt-1">
-                        </form>
-                    </div>
-                </div>
-                <div class="formulario-imagem col">
+                    <div class="formulario-imagem col">
                 </div>
             </div>
         </div>
-    </body>
-    
-    </html>
+    </body>   
+</html>
