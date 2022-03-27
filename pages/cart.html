@@ -5,59 +5,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redefinir senha</title>    
+    <title>Carrinho</title>    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/style-global.css">
+    <script>
+        var count = 0;
+        const more = () => {
+            count++;
+            labelCart.value = count;
+            console.log(count);
+        }
+
+        const less = () => {
+            if (count <= 1) return;
+            count--;
+            labelCart.value = count;
+            console.log(count);
+        }
+    </script>
 </head>
 
 <body class="deep-jungle-green">
     <style>
-        #descricao {
+        .descricao {
             display: flex;
         }
 
-        #descricao .descricao-texto {
+        .descricao-texto {
             background-color: rgba(35, 50, 55, .7);
             border-radius: 15px;
             margin: 0 10px;
         }
 
-        #descricao .descricao-texto p {
+        .descricao-texto p {
             padding: 10px;
             color: #fff;
             font-size: 1.25rem;
         }
-    
-        .icones {
-        height: 317px;
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-        border-radius: 30px;
-        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
-        background-color: white;
+
+        .produto{
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            border-radius: 30px;
+            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .produto img{
+            width: 80%;
+        }
+
+        .frame1 {
+            display: inline-block;
+        }
+
+
+        #botao {
+            display: flex;            
+            align-items: center;
+            padding: 10px;
+            margin: 20px 0px;
+        }
+
+        #botao .btn {
+        background-color: var(--eerie-black);
+        color: var(--gold-metallic);
+        width: 75%;
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 15px;
+        }
+
+        #botao .btn:hover {
+        background-color: rgba(30, 30, 30, 0.8);
+        border: 1px solid var(--gold-metallic);
+        }
+
+        #botao .btn-opacity {
+        background-color: rgba(30, 30, 30, 0.8);
+        }
+
+        #botao .btn-opacity:hover {
+        background-color: rgba(30, 30, 30, 1);
+        }
+
+        #botao .qtd-produto {
         display: flex;
-        flex-direction: column;
         align-items: center;
-}
+        }
+
+        #botao i {
+        font-size: 1.75rem;
+        color: rgba(30, 30, 30, 0.8);
+        margin: 0 10px;
+        cursor: pointer;
+        }
+
+        #botao i:hover {
+        color: rgba(30, 30, 30, 1);
+        }
+
+        #botao .rotulo {        
+        background-color: #ddd;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        width: 50px;
+        text-align: center;
+        
+        }
+
+        #nome-produto {
+            color: white;
+            font-weight: bolder;
+            margin: 5px;
+        }
     </style>
-    <div class="container">
-        <div class="icones col-xl-4" >
-        <img src="../assets/img/produto-1.png">
+     <div class="container">
+         <div class="row">
+        <div class="col-8 frame1">
+            <div class="row">
+            <div class="col-4">
+                    <div class="produto">              
+                        <img src="../assets/img/produto1-5.png">
+                        <div id="botao" class="qtd-produto">
+                            <i class="bi bi-dash-circle-fill" onclick="less()"></i>                            
+                            <input id="labelCart" type="text" class="rotulo" value="1" readonly>
+                            <i class="bi bi-plus-circle-fill" onclick="more()"></i>
+                        </div>
+                    </div>  
+                </div>  
+                <div class="col-8" >
+                    <div id="nome-produto">
+                        Nome do produto
+                    </div>                    
+                    <div class="descricao descricao-texto">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
+                                dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
+                                quo
+                                asperiores explicabo! Maxime, atque corporis!
+                            </p>
+                    </div>
+                </div> 
+            </div>                      
         </div>
-        <div id="descricao" class="col-12 col-md-7">
-            <div class="descricao-texto">
+        <div class="col-4">
+            <div class="descricao descricao-texto">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
                     dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
                     quo
                     asperiores explicabo! Maxime, atque corporis!
                 </p>
-            </div>
+        </div>
+        </div>     
+    </div>
+    </div>
+      </div>
+        
         </div>   
     </div>
 </body>
