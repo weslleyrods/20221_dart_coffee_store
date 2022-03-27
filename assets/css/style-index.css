@@ -1,4 +1,7 @@
 
+body{
+    background-color: white;
+}
 .navbar{
     background-color: var(--eerie-black); 
     
