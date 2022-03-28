@@ -169,6 +169,8 @@ body{
     text-align: center;
 }
 
+
+
 .row .produto .nome-produto{
     font-size: 100%;
     text-align: center;
@@ -179,6 +181,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-decoration: none;
 }
 
 .footer{
