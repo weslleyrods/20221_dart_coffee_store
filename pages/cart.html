@@ -44,15 +44,15 @@
 
         .descricao-texto p {
             padding: 10px;
-            color: #fff;
-            font-size: 1.25rem;
+            color: white;
+            font-size: 1rem;
         }
 
-        .produto{
+        .produto {
             width: 80%;
             margin-left: 10%;
             margin-right: 10%;
-            border-radius: 30px;
+            border-radius: 30px 30px 0px 0px;
             filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
             background-color: white;
             display: flex;
@@ -66,64 +66,39 @@
 
         .frame1 {
             display: inline-block;
-        }
-
-
-        #botao {
-            display: flex;            
-            align-items: center;
-            padding: 10px;
-            margin: 20px 0px;
-        }
-
-        #botao .btn {
-        background-color: var(--eerie-black);
-        color: var(--gold-metallic);
-        width: 75%;
-        font-size: 1.5rem;
-        padding: 10px;
-        margin-top: 5px;
-        border-radius: 15px;
-        }
-
-        #botao .btn:hover {
-        background-color: rgba(30, 30, 30, 0.8);
-        border: 1px solid var(--gold-metallic);
-        }
-
-        #botao .btn-opacity {
-        background-color: rgba(30, 30, 30, 0.8);
-        }
-
-        #botao .btn-opacity:hover {
-        background-color: rgba(30, 30, 30, 1);
-        }
-
-        #botao .qtd-produto {
-        display: flex;
-        align-items: center;
-        }
+        }   
 
         #botao i {
-        font-size: 1.75rem;
-        color: rgba(30, 30, 30, 0.8);
+        font-size: 1.25rem;
+        color: #D8B564;
         margin: 0 10px;
         cursor: pointer;
-        }
-
-        #botao i:hover {
-        color: rgba(30, 30, 30, 1);
-        }
+        align-items: center;
+        }     
 
         #botao .rotulo {        
-        background-color: #ddd;
-        padding: 0.5rem 0.75rem;
-        border-radius: 0.5rem;
-        font-weight: 600;
-        font-size: 1.2rem;
-        width: 50px;
+        background-color: black;        
+        border: none;
+        font-weight: 750;
+        font-size: 1rem;
+        height: 30px;
+        width: 30px;
         text-align: center;
-        
+        align-items: center;
+        color: #D8B564;
+        }
+
+        div #botao {
+            width: 80%;            
+            background-color: black;                        
+            margin-top: 0px;
+            margin-left: 10%;
+            margin-right: 10%;            
+            background-color: black;            
+            border-radius: 0px 0px 30px 30px; 
+            display: flex;
+            justify-content: center;  
+            color: #D8B564;
         }
 
         #nome-produto {
@@ -131,51 +106,204 @@
             font-weight: bolder;
             margin: 5px;
         }
+
+        /* div #descricao-rodape {
+            display: flexbox;
+        } */
+
+        div #remover {
+            padding: 10px;
+            color: white;
+            font-size: 1rem;
+            
+        }
+
+        div #preco {
+            padding: 10px;
+            color: white;
+            font-size: 1rem;
+            justify-self: end;
+        }
+
     </style>
      <div class="container">
-         <div class="row">
-        <div class="col-8 frame1">
-            <div class="row">
-            <div class="col-4">
-                    <div class="produto">              
-                        <img src="../assets/img/produto1-5.png">
-                        <div id="botao" class="qtd-produto">
-                            <i class="bi bi-dash-circle-fill" onclick="less()"></i>                            
-                            <input id="labelCart" type="text" class="rotulo" value="1" readonly>
-                            <i class="bi bi-plus-circle-fill" onclick="more()"></i>
+
+        <header>
+            <nav class="navbar navbar-dark">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Dart Coffee Store</a>
+      
+                <form class="d-flex">
+                  <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
+                  <button class="btn" type="button">
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+                  
+                        <button
+                          class="navbar-toggler"
+                          type="button"
+                          data-bs-toggle="offcanvas"
+                          data-bs-target="#demo">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="offcanvas offcanvas-end" id="demo">
+                          <div class="offcanvas-header">
+                            <div class="offcanvas-title">
+                    <img src="./assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                  </div>
+                  <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
+                          </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbar-nav" align="center">		
+                      <li class="nav-item">
+                          <i class="bi bi-box-arrow-in-right"></i>
+                          <div class="menu-link">
+                            <a class="nav-link" href="./pages/login.html" 
+                            >Entrar</a>
                         </div>
+                      </li>     
+                      <li class="nav-item">
+                        <i class="bi bi-person-badge"></i>
+                        <div class="menu-link">
+                          <a class="nav-link" href="./pages/signin.html"
+                          >Cadastrar</a>
+                      </div>
+                      </li>
+                      <li class="nav-item">
+                        <i class="bi bi-cart4"></i>
+                        <div class="menu-link">
+                        <a class="nav-link" href="./pages/cart.html"
+                        >Carrinho</a>
+                      </div>
+                      </li>
+                      <li class="nav-item">
+                        <i class="bi bi-bag-check"></i>
+                        <div class="menu-link">
+                        <a class="nav-link" href="#"
+                        >Meus Pedidos</a>
+                      </div>
+                      </li>
+                      <li class="nav-item">
+                        <i class="bi bi-heart-fill"></i>
+                        <div class="menu-link">
+                        <a class="nav-link" href="#"
+                        >Lista de Desejos</a>
+                      </div>
+                      </li>
+                      <li class="nav-item">    
+                        <i class="bi bi-envelope-plus"></i>
+                        <div class="menu-link">
+                        <a class="nav-link"href="#"
+                        >Contato</a>
+                      </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="offcanvas-body-button">
+                    <button class="btn" type="button">Sair</button>
+                  </div>
+                        </div>
+                    </nav>
+            </header>
+
+            <main>
+                <div class="row">
+                <div class="col-8 frame1">
+                    <div class="row">
+                    <div class="col-4">
+                            <div class="produto">              
+                                <img src="../assets/img/produto1-5.png">                        
+                            </div>  
+                            <div id="botao" class="qtd-produto">
+                                <i class="bi bi-dash" onclick="less()"></i>                            
+                                <input id="labelCart" type="text" class="rotulo" value="1" readonly>
+                                <i class="bi bi-plus" onclick="more()"></i>
+                            </div>
+
+                            <div class="produto">              
+                                <img src="../assets/img/produto1-5.png">                        
+                            </div>  
+                            <div id="botao" class="qtd-produto">
+                                <i class="bi bi-dash" onclick="less()"></i>                            
+                                <input id="labelCart" type="text" class="rotulo" value="1" readonly>
+                                <i class="bi bi-plus" onclick="more()"></i>
+                            </div>
+
+                        </div>  
+                        <div class="col-8" >
+                            <div id="nome-produto">
+                                Nome do produto
+                            </div>                    
+                            <div class="descricao descricao-texto">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
+                                        dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
+                                        quo
+                                        asperiores explicabo! Maxime, atque corporis!
+                                    </p>
+                            </div>
+                            <div class="row" id="descricao-preco">
+                                <div id="remover" class="col-6">
+                                    Remover este produto
+                                </div>
+                                <div id="preco" class="col-6 justify-content-end">
+                                    R$ 25,00
+                                </div>
+                            </div>
+
+                            <div id="nome-produto">
+                                Nome do produto
+                            </div>                    
+                            <div class="descricao descricao-texto">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
+                                        dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
+                                        quo
+                                        asperiores explicabo! Maxime, atque corporis!
+                                    </p>
+                            </div>
+                            <div class="row">
+                                <div id="remover" class="col-6">
+                                    Remover este produto
+                                </div>
+                                <div id="preco" class="col-6">
+                                    R$ 25,00
+                                </div>
+                            </div>
+
+                        </div> 
+
+                        
+
                     </div>  
-                </div>  
-                <div class="col-8" >
-                    <div id="nome-produto">
-                        Nome do produto
-                    </div>                    
+                    
+                    
+                    
+                </div>
+                <div class="col-4">
                     <div class="descricao descricao-texto">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
-                                dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
-                                quo
-                                asperiores explicabo! Maxime, atque corporis!
-                            </p>
-                    </div>
-                </div> 
-            </div>                      
-        </div>
-        <div class="col-4">
-            <div class="descricao descricao-texto">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
-                    dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
-                    quo
-                    asperiores explicabo! Maxime, atque corporis!
-                </p>
-        </div>
-        </div>     
-    </div>
-    </div>
-      </div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
+                            dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
+                            quo
+                            asperiores explicabo! Maxime, atque corporis!
+                        </p>
+                </div>
+                </div>     
+            </div>
+            </div>
+            </div>        
+                </div>
+            
+        </main>
         
-        </div>   
+        <footer>
+                <div class="footer">
+                <p>&copy;Copyright 2022 - Dart Coffee Store</p>
+                </div>
+        </footer>
     </div>
 </body>
 </html>
