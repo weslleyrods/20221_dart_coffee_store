@@ -1,0 +1,126 @@
+
+/*INÍCIO do Style da barra de navegação e Menu Sanduiche */ 
+.navbar{
+    background-color: var(--eerie-black); 
+}
+
+.navbar .navbar-toggler{
+    box-shadow: none;
+}
+
+.nav {
+    background-color: var(--eerie-black); 
+}
+
+.d-flex input{
+    border: 1px white;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+
+}
+.d-flex .btn{
+    box-shadow: none;
+}
+
+.offcanvas-header{
+    background-color: var(--eerie-black); 
+    padding: 0.5rem;
+}
+
+.offcanvas-header i{
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.offcanvas-header i:hover{
+    color: var(--gold-metallic);
+}
+
+.offcanvas{
+    background-color: var(--dark-slate-gray);
+}
+.offcanvas-body{
+    font-size: 1rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.offcanvas-body .nav-item{
+    display: flex;
+    align-items: center; 
+    color: white;
+    justify-content: space-between;
+}
+
+.offcanvas-body .menu-link{
+    display: flex;
+    flex: 2;
+    justify-content: center; 
+}
+
+.offcanvas-body .nav-item .nav-link:hover{
+    color: var(--gold-metallic);
+}
+
+.offcanvas-body .nav-item .teste:hover > *{
+    color: var(--gold-metallic);
+}
+
+
+.offcanvas-body .menu-link .nav-link{
+    text-decoration: none;
+    color: white;
+}
+
+.offcanvas-body-button{
+    background-color: var(--eerie-black);
+    text-align: center;
+}
+
+.offcanvas-body-button .btn{
+    font-weight: bold;
+}
+/* FIM do Style da barra de navegação e Menu Sanduiche */ 
+
+
+/*INÍCIO do Style do Footer*/
+footer{
+    background-color: var(--eerie-black);
+    height: 50px;
+    padding: 10px;
+    text-align: center;     
+
+}
+
+.footer p{
+    color: rgba(218, 218, 218, 0.883);
+}
+/*FIM do Style do Footer*/
+
+
+/*Responsividade da barra de Busca da barra de navegação*/
+@media screen and (max-width: 521px){
+
+    .d-flex input{
+        display: none;
+    }
+}
+
+/*Responsividade do Footer*/
+@media screen and (max-width: 385px){
+
+    footer{
+    
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
