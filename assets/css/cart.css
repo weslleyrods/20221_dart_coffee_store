@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+    margin-bottom: 10px;
 }
 
 .descricao {
@@ -15,7 +16,8 @@
 .descricao-texto {
     background-color: rgba(35, 50, 55, .7);
     border-radius: 15px;
-    margin: 0 10px;
+    margin: 0 0px;
+
 }
 
 .descricao-texto p {
@@ -85,7 +87,7 @@ div #botao {
 #nome-produto {
     color: white;
     font-weight: bolder;
-    margin: 5px;
+    margin-bottom: 2px;
     margin-top: 40px;
 }
 
@@ -99,7 +101,7 @@ div #preco {
     padding: 10px;
     color: white;
     font-size: 1rem;
-    justify-self: end;
+    text-align: end;
 }
 
 div #titulo_resumo,
@@ -144,12 +146,12 @@ div #btn_cancelar {
 #info-produtos {
     margin-bottom: 50px;
 }
-
-footer {
+/*AQUI*/
+/* footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
+} */
 
 
 
