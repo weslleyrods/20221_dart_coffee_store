@@ -20,9 +20,91 @@
 
     <link rel="stylesheet" href="../assets/css/style-global.css">
     <link rel="stylesheet" href="../assets/css/style-product-details.css">
+    <link rel="stylesheet" href="../assets/css/style-menu-e-footer.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Dart Coffee Store</a>
+  
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
+              <button class="btn" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+              
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#demo">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="offcanvas offcanvas-end" id="demo">
+                      <div class="offcanvas-header">
+                        <div class="offcanvas-title">
+                <img src="../assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
+              </div>
+              <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
+                      </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav" align="center">		
+                  <li class="nav-item">
+                      <i class="bi bi-box-arrow-in-right"></i>
+                      <div class="menu-link">
+                        <a class="nav-link" href="./login.html" 
+                        >Entrar</a>
+                    </div>
+                  </li>     
+                  <li class="nav-item">
+                    <i class="bi bi-person-badge"></i>
+                    <div class="menu-link">
+                      <a class="nav-link" href="./signin.html"
+                      >Cadastrar</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <i class="bi bi-cart4"></i>
+                    <div class="menu-link">
+                    <a class="nav-link" href="./cart.html"
+                    >Carrinho</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <i class="bi bi-bag-check"></i>
+                    <div class="menu-link">
+                    <a class="nav-link" href="#"
+                    >Meus Pedidos</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <i class="bi bi-heart-fill"></i>
+                    <div class="menu-link">
+                    <a class="nav-link" href="#"
+                    >Lista de Desejos</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">    
+                    <i class="bi bi-envelope-plus"></i>
+                    <div class="menu-link">
+                    <a class="nav-link"href="#"
+                    >Contato</a>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="offcanvas-body-button">
+                <button class="btn" type="button">Sair</button>
+              </div>
+                    </div>
+                </nav>
+      </header>
+
+
     <div class="container">
         <div class="col-12 col-md-12">
             <div class="row">
@@ -150,6 +232,11 @@
         </div>
     </div>
 
+    <footer>
+        <div class="footer">
+          <p>&copy;Copyright 2022 - Dart Coffee Store</p>
+        </div>
+      </footer> 
 
     <script>
         var count = 0;
@@ -166,116 +253,7 @@
             console.log(count);
         }
     </script>
-    <!-- Segunda tentativa  -->
-
-    <!-- <style>
-        .produtos {
-            min-height: 100vh;
-            background-color: red;
-        }
-
-        .produtos .produtos-fotos {
-            height: 75%;
-            background-color: green;
-        }
-
-        .produtos .produtos-descricao {
-            height: 25%;
-            background-color: yellow;
-        }
-
-        .produtos .produtos-informacoes {
-            height: 100%;
-            background-color: blue;
-        }
-
-        @media screen and(max-width: 992px) {}
-    </style>
-
-
-    <div class="container">
-         linha principal 
-    <div class="row produtos">
-     coluna da esquerda (produtos e descricao) 
-    <div class="col-12 col-lg-9">
-     fotos produto 
-    <div class="row produtos-fotos">
-        esquerda fotos
-
-    </div>
-     descricao 
-            <div class="row produtos-descricao">
-                esquerda descricao
-            </div>
-        </div>
-         culuna da direita (informacoes do produto e botao de compra)
-        <div class="col-12 col-lg-3">
-            <div class="row produtos-informacoes">
-                direita
-            </div>
-        </div>
-    </div>
-    </div> -->
-
-
-
-
-    <!-- tentativa 1 
-
-    <style>
-        .produtos {}
-
-        .produtos .produtos-imagens {
-            background-color: aquamarine;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-        }
-
-        .produtos .produtos-detalhes {
-            background-color: cadetblue;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .produtos .produto-descricao {
-            width: 80%;
-            background-color: brown;
-            height: 35%;
-            border-radius: 30px;
-            padding: 10px;
-        }
-
-        @media screen and (max-width: 992px) {}
-    </style>
-
-    <!-- <div class="container">
-        <main class="produtos">
-            <div class="row">
-                <div class="col-lg-9">
-                    <div class="row produtos-imagens d-flex">
-                        carrossel produtos
-                    </div>
-                    <div class="row produto-descricao d-flex">
-                        <div class="col">
-                            a
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 produtos-detalhes">
-                    <aside>
-                        informacão
-                    </aside>
-                </div>
-            </div>
-        </main>
-
-    </div> -->
+     
 </body>
 
 </html>

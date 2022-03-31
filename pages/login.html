@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+     <!-- BOOTSTRAP ICONS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -17,63 +20,93 @@
 
     <link rel="stylesheet" href="../assets/css/style-global.css">
     <link rel="stylesheet" href="../assets/css/style-login.css">
+    <link rel="stylesheet" href="../assets/css/style-menu-e-footer.css">
 </head>
 
 <body class="deep-jungle-green">
+    
+
+    <header>
+        <nav class="navbar navbar-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Dart Coffee Store</a>
+  
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
+              <button class="btn" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+              
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#demo">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="offcanvas offcanvas-end" id="demo">
+                      <div class="offcanvas-header">
+                        <div class="offcanvas-title">
+                <img src="../assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
+              </div>
+              <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
+                      </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav" align="center">		
+                  <li class="nav-item">
+                      <i class="bi bi-box-arrow-in-right"></i>
+                      <div class="menu-link">
+                        <a class="nav-link" href="./login.html" 
+                        >Entrar</a>
+                    </div>
+                  </li>     
+                  <li class="nav-item">
+                    <i class="bi bi-person-badge"></i>
+                    <div class="menu-link">
+                      <a class="nav-link" href="./signin.html"
+                      >Cadastrar</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <i class="bi bi-cart4"></i>
+                    <div class="menu-link">
+                    <a class="nav-link" href="./cart.html"
+                    >Carrinho</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <i class="bi bi-bag-check"></i>
+                    <div class="menu-link">
+                    <a class="nav-link" href="#"
+                    >Meus Pedidos</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">
+                    <i class="bi bi-heart-fill"></i>
+                    <div class="menu-link">
+                    <a class="nav-link" href="#"
+                    >Lista de Desejos</a>
+                  </div>
+                  </li>
+                  <li class="nav-item">    
+                    <i class="bi bi-envelope-plus"></i>
+                    <div class="menu-link">
+                    <a class="nav-link"href="#"
+                    >Contato</a>
+                  </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="offcanvas-body-button">
+                <button class="btn" type="button">Sair</button>
+              </div>
+                    </div>
+                </nav>
+      </header>
 
 
-    <!-- tentativa 3 -->
-
-    <!-- <style>
-        .formulario {
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .formulario .formulario-campos {
-            height: 75%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: var(--eerie-black);
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-
-
-        .formulario .formulario-campos form {
-            flex-direction: column;
-            text-align: left;
-        }
-
-        .formulario .formulario-imagem {
-            height: 75%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background-image: url("../assets/img/saco-cafe-entrar.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-        }
-
-        @media screen and (max-width: 992px) {
-            .formulario .formulario-imagem {
-                display: none;
-            }
-
-            .formulario .formulario-campos {
-                border-top-right-radius: 30px;
-                border-bottom-right-radius: 30px;
-            }
-        }
-    </style> -->
 
     <div class="container">
         <div class="row formulario">
@@ -83,12 +116,12 @@
                     <form class="d-flex">
                         <div class="row px-3">
                             <label for="email" class="form-label text-white">E-mail</label>
-                            <input type="text" id="email" name="email" class="form-control"
+                            <input type="email" required id="email" name="email" class="form-control"
                                 placeholder="exemplo@email.com " />
                         </div>
                         <div class="row px-3 mt-3">
                             <label for="senha" class="form-label rotulo text-white">Senha</label>
-                            <input type="password" id="senha" name="senha" class="form-control"
+                            <input type="password" required id="senha" name="senha" class="form-control"
                                 placeholder="digite sua senha" />
                         </div>
                         <div class="row mt-2 px-3">
@@ -113,108 +146,11 @@
         </div>
 
     </div>
-
-
-
-
-
-    <!-- tentativa 2 -->
-    <!-- <style>
-        .formulario .formulario-campos {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 400px;
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
-
-        .formulario .formulario-imagem {
-            height: 400px;
-        }
-    </style> -->
-
-    <!-- <div class="container">
-        <div class="row align-items-center formulario">
-            <div class="col-12 col-md-8">
-                <div class="row g-5">
-                    <form class="formulario-campos eerie-black">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-12 col-md-8">
-                                <h1 class="text-white my-2">Entrar</h1>
-                                <label for="email" class="form-label text-white">E-mail</label>
-                                <input type="email" id="email" name="senha" class="form-control" required
-                                    placeholder="example@email.com">
-                            </div>
-                        </div>
-                        <div class="row justify-content-center align-items-center mt-4">
-                            <div class="col-12 col-md-8">
-                                <label for="senha" class="form-label text-white">Senha</label>
-                                <input type="password" id="senha" name="senha" class="form-control" required
-                                    placeholder="sua senha">
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <a href="" class="text-center text-white p-2">
-                                Esquei minha senha
-                            </a>
-                        </div>
-                        <div class="row">
-                            <div class="col text-center">
-                                <button class="btn dark-slate-gray m-2 px-5 py-2 text-white">ENTRAR</button>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <a href="" class="text-center text-white p-2">
-                                Não possui cadastro?
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-md-4 d-none d-lg-block d-md-none">
-                <img class="imagem-formulario" src="../assets/img/saco-cafe-entrar.png" />
-            </div>
+    <footer>
+        <div class="footer">
+          <p>&copy;Copyright 2022 - Dart Coffee Store</p>
         </div>
-    </div> -->
-
-
-
-    <!-- tentativa 1 -->
-
-    <!-- <div class="container vh-100 bg-warning">
-        <div class="row h-100 align-items-center">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <form>
-                    <div class="row px-4 text-white">
-                        <h1 class="title">Entrar</h1>
-                    </div>
-                    <div class="row px-5 mt-4">
-                        <label for="email" class="form-label text-white">E-mail</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com" />
-                    </div>
-                    <div class="row px-5 mt-3">
-                        <label for="password" class="form-label text-white">Senha</label>
-                        <input type="password" class="form-control" id="password" name="password"
-                            placeholder="digite sua senha" />
-
-                        <a href="">
-                            <p class="form-text">Esqueci minha senha</p>
-                        </a>
-                    </div>
-                    <div class="row center px-5 mt-5">
-                        <button class="btn dark-slate-gray text-white">Entrar</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
-                div 2
-                
-            </div>
-        </div>
-    </div> -->
+      </footer> 
 </body>
 
 </html>
