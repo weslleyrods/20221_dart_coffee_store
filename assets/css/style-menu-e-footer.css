@@ -12,15 +12,16 @@
     background-color: var(--eerie-black); 
 }
 
-.d-flex input{
+header .d-flex input{
     border: 1px white;
     border-radius: 30px;
     text-decoration: none;
     text-align: center;
 
 }
-.d-flex .btn{
+header .d-flex .btn i{
     box-shadow: none;
+    color: var(--gold-metallic);
 }
 
 .offcanvas-header{
@@ -105,7 +106,7 @@ footer{
 /*Responsividade da barra de Busca da barra de navegação*/
 @media screen and (max-width: 521px){
 
-    .d-flex input{
+    header .d-flex input{
         display: none;
     }
 }
