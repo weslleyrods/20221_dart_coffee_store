@@ -16,15 +16,14 @@
     <link rel="stylesheet" href="../assets/css/style-menu-e-footer.css" />
     <link rel="stylesheet" href="../assets/css/cart.css" />
 
-    <script>
-        var count = 0;
-        const more = () => {
+    <script>     
+        var count = 0;   
+        const more = () => {                        
             count++;
             labelCart.value = count;
             console.log(count);
         }
-
-        const less = () => {
+        const less = () => {            
             if (count <= 1) return;
             count--;
             labelCart.value = count;
@@ -111,7 +110,7 @@
 
     <div class="container">
         <main>
-            <div class="col-12 col-md-12">
+            <div class="col-12">
                 <div class="row">
                     <p>
                     <p>
@@ -162,7 +161,7 @@
                                     </div>
                                     <div id="botao" class="qtd-produto">
                                         <i class="bi bi-dash" onclick="less()"></i>
-                                        <input id="labelCart" type="text" class="rotulo" value="1" readonly>
+                                        <input id="labelCart" type="text" class="rotulo" value="1">
                                         <i class="bi bi-plus" onclick="more()"></i>
                                     </div>
                                 </div>
@@ -198,14 +197,14 @@
 
                     <!-- inicio da coluna do resumo -->
 
-                    <div id="resumo_pedido" class="col-4">
+                    <div id="resumo_pedido" class="col-4 w-100">
                         <div class="descricao descricao-texto">
                             <div id="titulo_resumo">
                                 <div class="row">
                                     <h3 class="text-center">Resumo do pedido</h3>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row w-100">
                                 <div id="texto_resumo">
                                     <div class="row">
                                         <div class="col-6">2x produtos</div>
