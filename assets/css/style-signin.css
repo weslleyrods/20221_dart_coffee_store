@@ -4,8 +4,9 @@
   justify-content: center;
   text-align: center;
 }
+
 .formulario .formulario-campos {
-  height: 75%;
+  min-height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,16 +15,18 @@
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
+
 .formulario .formulario-campos form {
   flex-direction: column;
   text-align: center;
 }
+
 .formulario .formulario-campos {
   flex-direction: column;
   text-align: center;
 }
 .formulario .formulario-imagem {
-  height: 75%;
+  min-height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;

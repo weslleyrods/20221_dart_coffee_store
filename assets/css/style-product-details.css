@@ -3,7 +3,6 @@
 }
 
 .image-indicators {
-  /* background-color: aqua; */
   display: flex;
   justify-content: center;
   padding: 15px;
@@ -16,7 +15,9 @@
   margin: 0px 10px;
   background-color: #ddd;
   padding: 5px;
+  cursor: pointer;
 }
+
 
 #botao {
   display: flex;
@@ -78,6 +79,7 @@
 
 #descricao {
   display: flex;
+  margin-bottom: 75px;
 }
 
 #descricao .descricao-texto {
@@ -148,6 +150,10 @@
   height: 5px;
   border-radius: 100px;
   margin: 0px 2px;
+}
+
+.container #linha-principal {
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {

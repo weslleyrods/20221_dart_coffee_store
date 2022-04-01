@@ -23,6 +23,14 @@ header .d-flex input {
   box-shadow: none;
 }
 
+.d-flex .btn i{
+  color: var(--gold-metallic);
+}
+
+.d-flex .btn i:hover {
+  color: #fff;
+}
+
 .offcanvas-header {
   background-color: var(--eerie-black);
   padding: 0.5rem;
@@ -56,6 +64,8 @@ header .d-flex input {
   color: white;
   justify-content: space-between;
 }
+
+
 
 .offcanvas-body .menu-link {
   display: flex;

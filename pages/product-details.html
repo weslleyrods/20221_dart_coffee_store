@@ -98,7 +98,7 @@
 
     <div class="container">
         <div class="col-12 col-md-12">
-            <div class="row">
+            <div id="linha-principal" class="row">
                 <div id="informacoes" class="col-12 col-md-5">
                     <h1>Torrado e Moído Mogiana Pouch 250g</h1>
                     <div class="avaliacao">
@@ -160,9 +160,7 @@
 
                 </div>
                 <div id="carousel" class="col-12 col-md-7">
-                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-
+                    <div id="carousel-produto" class="carousel slide" data-bs-ride="carousel">
                         <!-- The slideshow/carousel -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -180,23 +178,22 @@
                         </div>
 
                         <!-- Left and right controls/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                            <!-- <span class="carousel-control-prev-icon"></span> -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-produto" data-bs-slide="prev">
                             <i style="color: black;font-size: 1.2rem;" class="bi bi-caret-left-fill"></i>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                            <!-- <span class="carousel-control-next-icon"></span> -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-produto" data-bs-slide="next">
                             <i style="color: black;font-size: 1.2rem;" class="bi bi-caret-right-fill"></i>
                         </button>
                     </div>
-                    <!-- imagens como indicador (fora da div do carousel) -->
+
                     <div class="image-indicators">
-                        <img src="../assets/img/produto-soluvel.png" data-bs-target="#demo" data-bs-slide-to="0" alt="">
-                        <img src="../assets/img/produto-soluvel-esquerda.png" data-bs-target="#demo"
-                            data-bs-slide-to="1" alt="">
-                        <img src="../assets/img/produto-soluvel-direita.png" data-bs-target="#demo" data-bs-slide-to="2"
-                            alt="">
+                        <img src="../assets/img/produto-soluvel.png" data-bs-target="#carousel-produto" data-bs-slide-to="0" alt="...">
+                        <img src="../assets/img/produto-soluvel-esquerda.png" data-bs-target="#carousel-produto"
+                            data-bs-slide-to="1" alt="...">
+                        <img src="../assets/img/produto-soluvel-direita.png" data-bs-target="#carousel-produto" data-bs-slide-to="2"
+                            alt="...">
                     </div>
+                    <!-- imagens como indicador (fora da div do carousel) -->
 
                 </div>
                 <div id="botao" class="col-12 col-md-5">
