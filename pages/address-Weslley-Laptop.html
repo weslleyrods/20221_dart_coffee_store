@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Endereço</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="../assets/css/style-global.css">
+    </head>
+    <body class="deep-jungle-green">
+
+
+        <!-- tentativa 02 -->   
+        
+        <style>
+            .formulario {
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .formulario .formulario-campos {
+                height: 75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: var(--eerie-black);
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+            .formulario .formulario-campos form {  
+                flex-direction: column;
+                text-align: center;            
+            }
+            .formulario .formulario-campos {  
+                flex-direction: column;
+                text-align: center;
+            }
+            .formulario .formulario-imagem {   
+                height: 75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background-image: url("../assets/img/saco-cafe.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+                    
+            .btn-success {   
+                width: 100%;
+                margin-top: 25px;
+                height: 38px;
+                
+                
+            }
+
+            @media screen and (max-width: 992px) {
+                .formulario .formulario-imagem {
+                    display: none;
+                }
+                .formulario .formulario-campos {
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+            }
+        </style>
+        <div class="container">
+            <div class="row formulario">
+                <div class="formulario-campos col-md-12 col-lg-8 ">
+                    <div class="row">
+                        <h1 class="titulo text-white">Endereço</h1>  
+                        <form class="d-flex" action='../index.html'>
+            <!--logradouro -->                               
+                            <div class="row px-3">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <label for="logradouro" class="form-label text-white"></label>
+                                    <input type="text" id="txtLogradouro" name="logradouro" 
+                                    class="form-control" placeholder="Logradouro"required/>
+                                </div>
+                            </div>                            
+            <!--numero -->  
+                                <div class="row px-3">
+                                    <div class="col-12 col-sm-12 col-md-6">
+                                        <label for="numero" class="form-label text-white"></label>
+                                        <input type="number" pattern="[0-9]+$" id="txtNumero" name="numero" 
+                                        class="form-control" placeholder="Numero"required/>
+                                    </div>
+                <!--bairro-->  
+                                    <div class="col-12 col-sm-12 col-md-6">
+                                        <label for="Bairro" class="form-label text-white"></label>
+                                        <input type="text" pattern="[aA-zZ\s]+$" id="txtBairro" name="bairro" class="form-control"
+                                        placeholder="Bairro" required/>
+                                    </div>
+                                </div>                                    
+            <!--cidade & estado -->
+                                                    <!-- maxlength="10" -->
+                                    <div class="row px-3">
+                                        <div class="col-12 col-sm-12 col-md-6">
+                                            <label for="cidade" class="form-label text-white"></label>
+                                            <input type="text" pattern="[aA-zZ\s]+$" id="txtCidade" name="cidade" 
+                                            class="form-control" placeholder="Cidade" required/>
+                                        </div>
+                                                <div class="col-12 col-sm-12 col-md-6">
+                                                    <label for="estado" class="form-label text-white"></label>
+                                                    <input type="text" pattern="[aA-zZ\s]+$" id="txtEstado" name="estado" 
+                                                    class="form-control" placeholder="Estado" required/>
+                                                </div>    
+                                    </div>
+                    <!--CEP-->  
+                                <div class="row px-3">
+                                        <div class="col-6 col-sm-12 col-md-6">
+                                            <label for="cep" class="form-label text-white"></label>
+                                            <input type="text"  pattern="[0-9]+$" id="txtCep" name="cep" 
+                                            class="form-control" placeholder="CEP" maxlength="8" required/>
+                                        </div>           
+                            <!--botão 1-->              
+                                        <div class="col-6 col-sm-12 col-md-6">
+                                                <button class="btn btn-success dark-slate-gray">BUSCAR</button>
+                                        </div>
+                                </div>            
+                                    <div class="row px-3 mt-1">
+                                        <div class="col-6 mt-3 ">
+                                            <a href="./login.html" class="text-left text-white">
+                                                Já possui cadastro?<br>Clique aqui
+                                            </a>
+                                        </div>
+                            <!--botão 2-->
+                                        <div class="col-6 ">
+                                                <button class="btn btn-success dark-slate-gray" >CADASTRAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row px-1 mt-1">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="formulario-imagem col">
+                </div>
+            </div>
+        </div>
+    </body>   
+</html>
