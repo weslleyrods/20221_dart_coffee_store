@@ -1,273 +1,322 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projeto Café</title>
-    <!--BOOTSTRAP CSS-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <!--BOOTSTRAP ICONS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <!--BOOSTRAP JS-->
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Café</title>
+  <!--BOOTSTRAP CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!--BOOTSTRAP ICONS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!--BOOSTRAP JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link rel="stylesheet" href="./assets/css/style-global.css" />
-    <link rel="stylesheet" href="./assets/css/style-index.css"/>
-    <link rel="stylesheet" href="./assets/css/style-menu-e-footer.css"/>
-  </head>
+  <link rel="stylesheet" href="./assets/css/style-global.css" />
+  <link rel="stylesheet" href="./assets/css/style-index.css" />
+  <link rel="stylesheet" href="./assets/css/style-menu-e-footer.css" />
+</head>
 
-  <body>
+<body>
 
-    <!-- INÍCIO da barra de navegação e Menu Sanduiche -->
-    <header>
-      <nav class="navbar navbar-dark">
-				<div class="container-fluid">
-				  <a class="navbar-brand" href="#">Dart Coffee Store</a>
+  <!-- INÍCIO da barra de navegação e Menu Sanduiche -->
+  <header>
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Dart Coffee Store</a>
 
-          <form class="d-flex">
-            <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
-            <button class="btn" type="button">
-              <i class="bi bi-search"></i>
-            </button>
-          </form>
-			
-				  <button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="offcanvas"
-					data-bs-target="#demo">
-					  <span class="navbar-toggler-icon"></span>
-				  </button>
-				  
-				  <div class="offcanvas offcanvas-end" id="demo">
-					<div class="offcanvas-header">
-					  <div class="offcanvas-title">
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
+          <button class="btn" type="button">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" id="demo">
+          <div class="offcanvas-header">
+            <div class="offcanvas-title">
               <img src="./assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
             </div>
             <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
-					</div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav" align="center">		
-                <li class="nav-item">
-                  <i class="bi bi-box-arrow-in-right"></i>
-                    <div class="menu-link">
-                      <a class="nav-link" href="./pages/login.html" 
-                      >Entrar</a>
-                  </div>
-                </li>     
-                <li class="nav-item">
-                  <i class="bi bi-person-badge"></i>
-                  <div class="menu-link">
-                    <a class="nav-link" href="./pages/signin.html"
-                    >Cadastrar</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                  <i class="bi bi-cart4"></i>
-                  <div class="menu-link">
-                  <a class="nav-link" href="./pages/cart.html"
-                  >Carrinho</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                  <i class="bi bi-bag-check"></i>
-                  <div class="menu-link">
-                  <a class="nav-link" href="#"
-                  >Meus Pedidos</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                  <i class="bi bi-heart-fill"></i>
-                  <div class="menu-link">
-                  <a class="nav-link" href="#"
-                  >Lista de Desejos</a>
-                </div>
-                </li>
-                <li class="nav-item">    
-                  <i class="bi bi-envelope-plus"></i>
-                  <div class="menu-link">
-                  <a class="nav-link"href="#"
-                  >Contato</a>
-                </div>
-                </li>
-              </ul>
-            </div>
-            <div class="offcanvas-body-button">
-              <button class="btn" type="button">Sair</button>
-            </div>
-				  </div>
-        </div>
-			  </nav>
-    </header>
-    <!-- FIM da barra de navegação e Menu Sanduiche -->
-
-      <!-- Carousel -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/img/carrossel-1.png" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/carrossel-2.png" class="d-block w-100" alt="...">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav" align="center">
+              <li class="nav-item">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="./pages/login.html">Entrar</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-person-badge"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="./pages/signin.html">Cadastrar</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-cart4"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="./pages/cart.html">Carrinho</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-bag-check"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="#">Meus Pedidos</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-heart-fill"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="#">Lista de Desejos</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-envelope-plus"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="#">Contato</a>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/carrossel-3.png" class="d-block w-100" alt="...">
+          <div class="offcanvas-body-button">
+            <button class="btn" type="button">Sair</button>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Próximo</span>
-        </button>
       </div>
-      <!--FIM CARROSSEL -->
+    </nav>
+  </header>
+  <!-- FIM da barra de navegação e Menu Sanduiche -->
 
-      <!--Filtro-->
-      <nav class="nav nav-dark">
-        <div class="container-fluid py-2">
-          <!-- Nav pills -->
-          <ul class="nav nav-pills justify-content-around" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active rounded-pill" data-bs-toggle="pill" href="#home">Todos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill" data-bs-toggle="pill" href="#menu1">Grãos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill" data-bs-toggle="pill" href="#menu2">Solúvel</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link rounded-pill" data-bs-toggle="pill" href="#menu3">Acessórios</a>
-            </li>
-          </ul>
+  <!-- Carousel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/carrossel-1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/carrossel-2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/carrossel-3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+  <!--FIM CARROSSEL -->
+
+  <!--Filtro-->
+  <nav class="nav nav-dark">
+    <div class="container-fluid py-2">
+      <!-- Nav pills -->
+      <ul class="nav nav-pills justify-content-around" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active rounded-pill" data-bs-toggle="pill" href="#home">Todos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" data-bs-toggle="pill" href="#menu1">Grãos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" data-bs-toggle="pill" href="#menu2">Solúvel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link rounded-pill" data-bs-toggle="pill" href="#menu3">Acessórios</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Tab panes -->
+  <div class="teste">
+    <div class="tab-content">
+      <!-- FILTRO da aba  TODOS OS PRODUTOS-->
+      <div id="home" class="container tab-pane active"><br>
+        <div class="container">
+          <div class="row" id="lista-produtos">
+            <!--
+            <div class="col-xl-4 col-md-6 mb-3">
+              <div class="produto">
+                <div class="icones">
+                  <i class="bi bi-cart-plus"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <img src="./assets/img/produto-soluvel.png">
+                <div class="nome-produto">Torrado e Moído Mogiana Pouch 250g</div>
+                <button type="button" class="btn btn-sm"
+                  onclick="location.href='./pages/product-details.html';"><b>R$57,97</b> Comprar</button>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-3">
+              <div class="produto">
+                <div class="icones">
+                  <i class="bi bi-cart-plus"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <img src="./assets/img/produto-graos.png">
+                <div class="nome-produto">Forza Grãos 500g</div>
+                <button type="button" class="btn btn-sm"
+                  onclick="location.href='./pages/product-details.html';"><b>R$67,97</b>Comprar</button>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-3">
+              <div class="produto">
+                <div class="icones">
+                  <i class="bi bi-cart-plus"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <img src="./assets/img/produto-acessorio.png">
+                <div class="nome-produto">Cafeteira Italiana Inox</div>
+                <button type="button" class="btn btn-sm"
+                  onclick="location.href='./pages/product-details.html';"><b>R$107,97</b>Comprar</button>
+              </div>
+            </div>
+          -->
+          </div>
         </div>
-      </nav>
+      </div>
 
-        <!-- Tab panes -->
-<div class="teste">
-        <div class="tab-content">
-          <!-- FILTRO da aba  TODOS OS PRODUTOS-->
-          <div id="home" class="container tab-pane active"><br>           
-            <div class="container">
-              <div class="row">               
-                <!--PRODUTOS SOLÚVEL-->
-                <div class="col-xl-4 col-md-6 mb-3">
-                  <div class="produto">
-                    <div class="icones">
-                      <i class="bi bi-cart-plus"></i>
-                      <i class="bi bi-heart"></i>
-                    </div>
-                    <img src="./assets/img/produto-soluvel.png">
-                    <div class="nome-produto">Torrado e Moído Mogiana Pouch 250g</div>                 
-                    <button type="button" class="btn btn-sm" onclick="location.href='./pages/product-details.html';"><b>R$57,97</b> Comprar</button>
-                  </div>
+      <!--FILTRO da aba GRÃOS-->
+      <div id="menu1" class="container tab-pane fade"><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 mb-3">
+              <div class="produto">
+                <div class="icones">
+                  <i class="bi bi-cart-plus"></i>
+                  <i class="bi bi-heart"></i>
                 </div>
-                <!--PRODUTOS GRÃOS-->
-                <div class="col-xl-4 col-md-6 mb-3">       
-                  <div class="produto">
-                    <div class="icones">
-                      <i class="bi bi-cart-plus"></i>
-                      <i class="bi bi-heart"></i>
-                    </div>
-                    <img src="./assets/img/produto-graos.png">
-                    <div class="nome-produto">Forza Grãos 500g</div>
-                    <button type="button" class="btn btn-sm" onclick="location.href='./pages/product-details.html';"><b>R$67,97</b>Comprar</button>
-                  </div>
-                </div>
-                <!--PRODUTOS ACESSÓRIOS-->
-                <div class="col-xl-4 col-md-6 mb-3">
-                  <div class="produto">
-                    <div class="icones">
-                      <i class="bi bi-cart-plus"></i>
-                      <i class="bi bi-heart"></i>
-                    </div>
-                    <img src="./assets/img/produto-acessorio.png">
-                    <div class="nome-produto">Cafeteira Italiana Inox</div>
-                    <button type="button" class="btn btn-sm" onclick="location.href='./pages/product-details.html';"><b>R$107,97</b>Comprar</button>
-                  </div>           
-                </div>
-              </div>         
+                <img src="./assets/img/produto-graos.png">
+                <div class="nome-produto">Forza Grãos 500g</div>
+                <button type="button" class="btn btn-sm"
+                  onclick="location.href='./pages/product-details.html';"><b>R$67,97</b>Comprar</button>
+              </div>
             </div>
           </div>
-
-          <!--FILTRO da aba GRÃOS-->
-          <div id="menu1" class="container tab-pane fade"><br>
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-4 col-md-6 mb-3">       
-                  <div class="produto">
-                    <div class="icones">
-                      <i class="bi bi-cart-plus"></i>
-                      <i class="bi bi-heart"></i>
-                    </div>
-                    <img src="./assets/img/produto-graos.png">
-                    <div class="nome-produto">Forza Grãos 500g</div>
-                    <button type="button" class="btn btn-sm" onclick="location.href='./pages/product-details.html';"><b>R$67,97</b>Comprar</button>
-                  </div>
-                </div>
-              </div>         
-            </div>
-          </div>
-          <!--FILTRO da aba SOLUVEL-->
-          <div id="menu2" class="container tab-pane fade"><br>
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-4 col-md-6 mb-3">
-                  <div class="produto">
-                    <div class="icones">
-                      <i class="bi bi-cart-plus"></i>
-                      <i class="bi bi-heart"></i>
-                    </div>
-                    <img src="./assets/img/produto-soluvel.png">
-                    <div class="nome-produto">Torrado e Moído Mogiana Pouch 250g</div>
-                    <button type="button" class="btn btn-sm" onclick="location.href='./pages/product-details.html';"><b>R$57,97</b> Comprar</button>
-                  </div>
-                </div>
-              </div>         
-            </div>
-          </div>
-          <!--FILTRO da aba ACESSORIOS-->
-          <div id="menu3" class="container tab-pane fade"><br>
-            <div class="container">
-              <div class="row">
-                <div class="col-xl-4 col-md-6 mb-3">
-                  <div class="produto">
-                    <div class="icones">
-                      <i class="bi bi-cart-plus"></i>
-                      <i class="bi bi-heart"></i>
-                    </div>
-                    <img src="./assets/img/produto-acessorio.png">
-                    <div class="nome-produto">Cafeteira Italiana Inox</div>
-                    <button type="button" class="btn btn-sm" onclick="location.href='./pages/product-details.html';"><b>R$107,97</b>Comprar</button>
-                  </div>           
-                </div>
-              </div>         
-            </div>
-          </div>
-        <!-- Fim do Tab panes -->
         </div>
-</div>
-        <footer>
-          <div class="footer">
-            <p>&copy;Copyright 2022 - Dart Coffee Store</p>
+      </div>
+      <!--FILTRO da aba SOLUVEL-->
+      <div id="menu2" class="container tab-pane fade"><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 mb-3">
+              <div class="produto">
+                <div class="icones">
+                  <i class="bi bi-cart-plus"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <img src="./assets/img/produto-soluvel.png">
+                <div class="nome-produto">Torrado e Moído Mogiana Pouch 250g</div>
+                <button type="button" class="btn btn-sm"
+                  onclick="location.href='./pages/product-details.html';"><b>R$57,97</b> Comprar</button>
+              </div>
+            </div>
           </div>
-        </footer> 
-  </body>
+        </div>
+      </div>
+      <!--FILTRO da aba ACESSORIOS-->
+      <div id="menu3" class="container tab-pane fade"><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 mb-3">
+              <div class="produto">
+                <div class="icones">
+                  <i class="bi bi-cart-plus"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <img src="./assets/img/produto-acessorio.png">
+                <div class="nome-produto">Cafeteira Italiana Inox</div>
+                <button type="button" class="btn btn-sm"
+                  onclick="location.href='./pages/product-details.html';"><b>R$107,97</b>Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim do Tab panes -->
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <p>&copy;Copyright 2022 - Dart Coffee Store</p>
+    </div>
+  </footer>
+</body>
 
+<script>
+  let templateCard = `
+  <div class="col-xl-4 col-md-6 mb-3">
+    <div class="produto">
+      <div class="icones">
+        <i class="bi bi-cart-plus"></i>
+        <i class="bi bi-heart"></i>
+      </div>
+      <img src="./assets/img/produto-soluvel.png">
+      <div class="nome-produto">Torrado e Moído Mogiana Pouch 250g</div>
+      <button type="button" class="btn btn-sm"
+        onclick="location.href='./pages/product-details.html';"><b>R$57,97</b> Comprar</button>
+    </div>
+  </div>
+  `;
+  // Pesquisar: javascript com manipulação de DOM.JS
+  $.ajax({
+    url: "http://localhost:3000/produto/",
+    method: "GET",
+    success: (dados) => {
+      //lembrar dos status do backend
+      console.log(dados);
+      dados.data.forEach((prod, index) => {
+        $("#lista-produtos").append(montarCard(prod.titulo, prod.valor));
+      });
+    },
+    error: (erro) => {
+
+    }
+  })
+
+  const montarTabela = (dados) => {
+
+  }
+
+  const montarCard = (titulo, valor) => {
+    return `
+    <div class="col-xl-4 col-md-6 mb-3">
+    <div class="produto">
+      <div class="icones">
+        <i class="bi bi-cart-plus"></i>
+        <i class="bi bi-heart"></i>
+      </div>
+      <img src="./assets/img/produto-soluvel.png">
+      <div class="nome-produto">${titulo}</div>
+      <button type="button" class="btn btn-sm"
+        onclick="location.href='./pages/product-details.html';"><b>R$${valor}</b> Comprar</button>
+    </div>
+  </div>
+    `
+  }
+</script>
