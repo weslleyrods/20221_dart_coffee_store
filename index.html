@@ -217,7 +217,7 @@
                 <img src="./assets/img/produto-acessorio.png">
                 <div class="nome-produto">Cafeteira Italiana Inox</div>
                 <button type="button" class="btn btn-sm"
-                  onclick="location.href='./pages/product-details.html';"><b>R$107,97</b>Comprar</button>
+                  onclick="location.href='./pages/product-details.html?id=sadasdsadasd';"><b>R$107,97</b>Comprar</button>
               </div>
             </div>
           </div>
@@ -237,14 +237,14 @@
 
   // JS puro
   let url = "http://localhost:3000/produto/"
-  fetch(url) //faz uma requisição/solicitação utilizando o url.Atendida ela retorna uma promise
+  fetch(url) //faz uma requisição/solicitação utilizando o url. Atendida ela retorna uma promise. 
     .then((res) => {
       return res.json()
     })
     .then((res) => {
       console.log(res);
       for (let produto of res.data) {
-        const { titulo, valor } = produto
+        const { titulo, valor, _id } = produto
         document.querySelector("#lista-produtos").innerHTML += `
         <div class="col-xl-4 col-md-6 mb-3">
         <div class="produto">
@@ -255,10 +255,39 @@
           <img src="./assets/img/produto-soluvel.png">
           <div class="nome-produto">${titulo}</div>
           <button type="button" class="btn btn-sm"
-            onclick="location.href='./pages/product-details.html';"><b>R$ ${valor}</b> Comprar</button>
+            onclick="location.href='./pages/product-details.html?id=${_id}';"><b>R$ ${valor}</b> Comprar</button>
         </div>
         </div>  
         `
       }
     })
+/*
+      // JS puro
+      let url = "http://localhost:3000/produto/"
+      fetch(url) //faz uma requisição/solicitação utilizando o url. Atendida ela retorna uma promise. 
+        .then((res) => {
+          return res.json()
+        })
+        .then((res) => {
+          console.log(res);
+          for (let produto of res.data) {
+            const { titulo, valor, _id } = produto
+            document.querySelector("#lista-produtos").innerHTML += `
+            <div class="col-xl-4 col-md-6 mb-3">
+            <div class="produto">
+            <div class="icones">
+              <i class="bi bi-cart-plus"></i>
+              <i class="bi bi-heart"></i>
+            </div>
+              <img src="./assets/img/produto-soluvel.png">
+              <div class="nome-produto">${titulo}</div>
+              <button type="button" class="btn btn-sm"
+                onclick="location.href='./pages/product-details.html?id=${_id}';"><b>R$ ${valor}</b> Comprar</button>
+            </div>
+            </div>  
+            `
+          }
+        })
+    */
+
 </script>
