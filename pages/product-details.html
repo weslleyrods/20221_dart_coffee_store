@@ -100,7 +100,7 @@
         <div class="col-12 col-md-12">
             <div id="linha-principal" class="row">
                 <div id="informacoes" class="col-12 col-md-5">
-                    <h1>Torrado e Moído Mogiana Pouch 250g</h1>
+                    <h1 id="titulo-produto"></h1>
                     <div class="avaliacao">
                         <i class="bi bi-star-fill"></i>
                         <i class="bi bi-star-fill"></i>
@@ -108,7 +108,7 @@
                         <i class="bi bi-star-half"></i>
                         <i class="bi bi-star"></i>
                     </div>
-                    <h1 id="preco">R$ 57,97</h1>
+                    <h1 id="preco"></h1>
                     <div class="notas">
                         <div class="nota">
                             <p>Torra</p>
@@ -211,7 +211,7 @@
                 </div>
                 <div id="descricao" class="col-12 col-md-7">
                     <div class="descricao-texto">
-                        <p>
+                        <p id="descricao-produto">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
                             dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
                             quo
@@ -244,50 +244,28 @@
             console.log(count);
         }
 
-        //
+        //levar o produto para outra pagina atraves do id
         //URLSearchParams: permite trabalhar com as strings da URL ex=?id=62adf590994831781c807a6d
-        const urlParams = new URLSearchParams(window.location.search); //window.location.search = vai localizar 
+        const urlParams = new URLSearchParams(window.location.search);  
         //?id=62adf590994831781c807a6d
         let id = urlParams.get("id");
-        let url = `http://localhost:3000/produto/${id}`;
+        let url = `https://agile-plateau-96407.herokuapp.com/produto/${id}`;
         fetch(url)
             .then((res) => {
                 return res.json()
-
-
+            })
+            .then((res) => {
+                console.log(res);
+                const { titulo, valor, descricao } = res.data
+                document.querySelector("#titulo-produto").textContent=titulo
+                document.querySelector("#preco").textContent=`R$ ${valor}`
+                document.querySelector("#descricao-produto").textContent=descricao
+            }
+        )
 
     </script>
 
-    <!--
-      // JS puro
-      let url = "http://localhost:3000/produto/"
-      fetch(url) //faz uma requisição/solicitação utilizando o url. Atendida ela retorna uma promise. 
-        .then((res) => {
-          return res.json()
-        })
-        .then((res) => {
-          console.log(res);
-          for (let produto of res.data) {
-            const { titulo, valor, _id } = produto
-            document.querySelector("#lista-produtos").innerHTML += `
-            <div class="col-xl-4 col-md-6 mb-3">
-            <div class="produto">
-            <div class="icones">
-              <i class="bi bi-cart-plus"></i>
-              <i class="bi bi-heart"></i>
-            </div>
-              <img src="./assets/img/produto-soluvel.png">
-              <div class="nome-produto">${titulo}</div>
-              <button type="button" class="btn btn-sm"
-                onclick="location.href='./pages/product-details.html?id=${_id}';"><b>R$ ${valor}</b> Comprar</button>
-            </div>
-            </div>  
-            `
-          }
-        })
-    -->
-
-
+    
 
 
 </body>
