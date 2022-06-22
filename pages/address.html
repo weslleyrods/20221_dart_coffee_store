@@ -1,191 +1,190 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Endereço</title>
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <!--CSS bootstrap icone-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endereço</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-    
-        <link rel="stylesheet" href="../assets/css/style-global.css">
-        <link rel="stylesheet" href="../assets/css/style-menu-e-footer.css">
-        <link rel="stylesheet" href="../assets/css/style-address.css">
+  <!--CSS bootstrap icone-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    </head>
-    <body class="deep-jungle-green">
-        <header>
-            <nav class="navbar navbar-dark">
-                      <div class="container-fluid">
-                        <a class="navbar-brand" href="../index.html">Dart Coffee Store</a>
-      
-                <form class="d-flex">
-                  <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
-                  <button class="btn" type="button">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </form>
-                  
-                        <button
-                          class="navbar-toggler"
-                          type="button"
-                          data-bs-toggle="offcanvas"
-                          data-bs-target="#demo">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="offcanvas offcanvas-end" id="demo">
-                          <div class="offcanvas-header">
-                            <div class="offcanvas-title">
-                    <img src="../assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
-                  </div>
-                  <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
-                          </div>
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav" align="center">		
-                      <li class="nav-item">
-                          <i class="bi bi-box-arrow-in-right"></i>
-                          <div class="menu-link">
-                            <a class="nav-link" href="../pages/login.html" 
-                            >Entrar</a>
-                        </div>
-                      </li>     
-                      <li class="nav-item">
-                        <i class="bi bi-person-badge"></i>
-                        <div class="menu-link">
-                          <a class="nav-link" href="../pages/signin.html"
-                          >Cadastrar</a>
-                      </div>
-                      </li>
-                      <li class="nav-item">
-                        <i class="bi bi-cart4"></i>
-                        <div class="menu-link">
-                        <a class="nav-link" href="../pages/cart.html"
-                        >Carrinho</a>
-                      </div>
-                      </li>
-                      <li class="nav-item">
-                        <i class="bi bi-bag-check"></i>
-                        <div class="menu-link">
-                        <a class="nav-link" href="#"
-                        >Meus Pedidos</a>
-                      </div>
-                      </li>
-                      <li class="nav-item">
-                        <i class="bi bi-heart-fill"></i>
-                        <div class="menu-link">
-                        <a class="nav-link" href="#"
-                        >Lista de Desejos</a>
-                      </div>
-                      </li>
-                      <li class="nav-item">    
-                        <i class="bi bi-envelope-plus"></i>
-                        <div class="menu-link">
-                        <a class="nav-link"href="#"
-                        >Contato</a>
-                      </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="offcanvas-body-button">
-                    <button class="btn" type="button">Sair</button>
-                  </div>
-                        </div>
-                    </nav>
-          </header>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="../assets/css/style-global.css">
+  <link rel="stylesheet" href="../assets/css/style-menu-e-footer.css">
+  <link rel="stylesheet" href="../assets/css/style-address.css">
 
-        <!-- tentativa 02 -->   
-        
+</head>
 
-        <div class="container">
-            <div class="row formulario">
-                <div class="formulario-campos col-md-12 col-lg-8 ">
-                    <div class="row">
-                        <h1 class="titulo text-white">Endereço</h1>  
-                        <form class="d-flex" action='../index.html'>
-            <!--logradouro -->                               
-                            <div class="row px-3">
-                                <div class="col-12 col-sm-12 col-md-12">
-                                    <label for="logradouro" class="form-label text-white"></label>
-                                    <input type="text" id="txtLogradouro" name="logradouro" 
-                                    class="form-control" placeholder="Logradouro"required/>
-                                </div>
-                            </div>                            
-            <!--numero -->  
-                                <div class="row px-3">
-                                    <div class="col-12 col-sm-12 col-md-6">
-                                        <label for="numero" class="form-label text-white"></label>
-                                        <input type="number" pattern="[0-9]+$" id="txtNumero" name="numero" 
-                                        class="form-control" placeholder="Numero"required/>
-                                    </div>
-                <!--bairro-->  
-                                    <div class="col-12 col-sm-12 col-md-6">
-                                        <label for="Bairro" class="form-label text-white"></label>
-                                        <input type="text" pattern="[aA-zZ\s]+$" id="txtBairro" name="bairro" class="form-control"
-                                        placeholder="Bairro" required/>
-                                    </div>
-                                </div>                                    
-            <!--cidade & estado -->
-                                                    <!-- maxlength="10" -->
-                                    <div class="row px-3">
-                                        <div class="col-12 col-sm-12 col-md-6">
-                                            <label for="cidade" class="form-label text-white"></label>
-                                            <input type="text" pattern="[aA-zZ\s]+$" id="txtCidade" name="cidade" 
-                                            class="form-control" placeholder="Cidade" required/>
-                                        </div>
-                                                <div class="col-12 col-sm-12 col-md-6">
-                                                    <label for="estado" class="form-label text-white"></label>
-                                                    <input type="text" pattern="[aA-zZ\s]+$" id="txtEstado" name="estado" 
-                                                    class="form-control" placeholder="Estado" required/>
-                                                </div>    
-                                    </div>
-                    <!--CEP-->  
-                                <div class="row px-3">
-                                        <div class="col-6 col-sm-12 col-md-6">
-                                            <label for="cep" class="form-label text-white"></label>
-                                            <input type="text"  pattern="[0-9]+$" id="txtCep" name="cep" 
-                                            class="form-control" placeholder="CEP" maxlength="8" required/>
-                                        </div>           
-                            <!--botão 1-->              
-                                        <div class="col-6 col-sm-12 col-md-6">
-                                                <button class="btn btn-success dark-slate-gray">BUSCAR</button>
-                                        </div>
-                                </div>            
-                                    <div class="row px-3 mt-1">
-                                        <div class="col-6 mt-3 ">
-                                            <a href="./login.html" class="text-left text-white">
-                                                Já possui cadastro?<br>Clique aqui
-                                            </a>
-                                        </div>
-                            <!--botão 2-->
-                                        <div class="col-6 ">
-                                                <button class="btn btn-success dark-slate-gray" >CADASTRAR</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row px-1 mt-1">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="formulario-imagem col">
+<body class="deep-jungle-green">
+  <header>
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Dart Coffee Store</a>
+
+        <div class="d-flex">
+          <input class="form-control me-2" type="text" id="busca" placeholder="Buscar produtos" onkeydown="((event)=>{
+                                let keycode = event.keyCode
+                                if(keycode === 13)
+                                window.open(`/index.html?busca=${busca.value}`, '_self')
+                                
+                              })(event)" />
+          <button id="btn_busca" class="btn" type="button"
+            onclick="window.open(`/index.html?busca=${busca.value}`, '_self')">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" id="demo">
+          <div class="offcanvas-header">
+            <div class="offcanvas-title">
+              <img src="../assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
+            </div>
+            <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav" align="center">
+              <li class="nav-item">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="../pages/login.html">Entrar</a>
                 </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-person-badge"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="../pages/signin.html">Cadastrar</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-cart4"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="../pages/cart.html">Carrinho</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-bag-check"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="#">Meus Pedidos</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-heart-fill"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="#">Lista de Desejos</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <i class="bi bi-envelope-plus"></i>
+                <div class="menu-link">
+                  <a class="nav-link" href="#">Contato</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="offcanvas-body-button">
+            <button class="btn" type="button">Sair</button>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+
+  <!-- tentativa 02 -->
+
+
+  <div class="container">
+    <div class="row formulario">
+      <div class="formulario-campos col-md-12 col-lg-8 ">
+        <div class="row">
+          <h1 class="titulo text-white">Endereço</h1>
+          <form class="d-flex" action='../index.html'>
+            <!--logradouro -->
+            <div class="row px-3">
+              <div class="col-12 col-sm-12 col-md-12">
+                <label for="logradouro" class="form-label text-white"></label>
+                <input type="text" id="txtLogradouro" name="logradouro" class="form-control" placeholder="Logradouro"
+                  required />
+              </div>
+            </div>
+            <!--numero -->
+            <div class="row px-3">
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="numero" class="form-label text-white"></label>
+                <input type="number" pattern="[0-9]+$" id="txtNumero" name="numero" class="form-control"
+                  placeholder="Numero" required />
+              </div>
+              <!--bairro-->
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="Bairro" class="form-label text-white"></label>
+                <input type="text" pattern="[aA-zZ\s]+$" id="txtBairro" name="bairro" class="form-control"
+                  placeholder="Bairro" required />
+              </div>
+            </div>
+            <!--cidade & estado -->
+            <!-- maxlength="10" -->
+            <div class="row px-3">
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="cidade" class="form-label text-white"></label>
+                <input type="text" pattern="[aA-zZ\s]+$" id="txtCidade" name="cidade" class="form-control"
+                  placeholder="Cidade" required />
+              </div>
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="estado" class="form-label text-white"></label>
+                <input type="text" pattern="[aA-zZ\s]+$" id="txtEstado" name="estado" class="form-control"
+                  placeholder="Estado" required />
+              </div>
+            </div>
+            <!--CEP-->
+            <div class="row px-3">
+              <div class="col-6 col-sm-12 col-md-6">
+                <label for="cep" class="form-label text-white"></label>
+                <input type="text" pattern="[0-9]+$" id="txtCep" name="cep" class="form-control" placeholder="CEP"
+                  maxlength="8" required />
+              </div>
+              <!--botão 1-->
+              <div class="col-6 col-sm-12 col-md-6">
+                <button class="btn btn-success dark-slate-gray">BUSCAR</button>
+              </div>
+            </div>
+            <div class="row px-3 mt-1">
+              <div class="col-6 mt-3 ">
+                <a href="./login.html" class="text-left text-white">
+                  Já possui cadastro?<br>Clique aqui
+                </a>
+              </div>
+              <!--botão 2-->
+              <div class="col-6 ">
+                <button class="btn btn-success dark-slate-gray">CADASTRAR</button>
+              </div>
             </div>
         </div>
-        <footer>
-            <div class="footer">
-              <p>&copy;Copyright 2022 - Dart Coffee Store</p>
-            </div>
-        </footer> 
-    </body>   
+        <div class="row px-1 mt-1">
+          </form>
+        </div>
+      </div>
+      <div class="formulario-imagem col">
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+      <p>&copy;Copyright 2022 - Dart Coffee Store</p>
+    </div>
+  </footer>
+</body>
+
 </html>

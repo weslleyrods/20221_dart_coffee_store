@@ -32,12 +32,17 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">Dart Coffee Store</a>
 
-        <form class="d-flex">
-          <input class="form-control me-2" type="text" placeholder="Buscar produtos" />
-          <button class="btn" type="button">
+        <div class="d-flex">
+          <input class="form-control me-2" type="text" id="busca" placeholder="Buscar produtos" onkeydown="((event)=>{
+                let keycode = event.keyCode
+                if(keycode === 13)
+                window.open(`/index.html?busca=${busca.value}`, '_self')                
+              })(event)" />
+          <button id="btn_busca" class="btn" type="button"
+            onclick="window.open(`/index.html?busca=${busca.value}`, '_self')">
             <i class="bi bi-search"></i>
           </button>
-        </form>
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
           <span class="navbar-toggler-icon"></span>
