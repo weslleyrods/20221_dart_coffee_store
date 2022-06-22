@@ -110,7 +110,7 @@
       <div class="formulario-campos col-md-12 col-lg-9">
         <div class="row">
           <h1 class="titulo text-white">Cadastro</h1>
-          <form class="d-flex" action='./address.html'>
+          <form id="formCadastro" name="formCadastro" class="d-flex">
             <!--campo de nome e sobrenome-->
             <div class="row px-3">
               <div class="col-12 col-sm-12 col-md-6">
@@ -223,12 +223,12 @@
               </div>
               <!--botão proximo-->
               <div class="col-6">
-                <button class="btn btn-success dark-slate-gray">PROXIMO</button>
+                <button class="btn btn-success dark-slate-gray">CADASTRAR</button>
               </div>
             </div>
         </div>
+        </form>
         <div class="row px-1 mt-1">
-          </form>
         </div>
       </div>
       <!-- <div class="formulario-imagem col">
@@ -240,11 +240,44 @@
       <p>&copy;Copyright 2022 - Dart Coffee Store</p>
     </div>
   </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
 
 <script lang="javascript">
+
+  // teste axios
+
+  const form = document.getElementById("formCadastro");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    axios.post("https://dartcoffee.herokuapp.com/cliente/cadastro", {
+      nome: txtNome.value,
+      sobrenome: txtSobrenome.value,
+      cpf: txtCPF.value,
+      email: txtEmail.value,
+      senha: txtSenha.value,
+      telefone: txtTelefone.value,
+      celular: txtCelular.value,
+      logradouro: txtLogradouro.value,
+      numero: txtNumero.value,
+      bairro: txtBairro.value,
+      cidade: txtCidade.value,
+      estado: txtEstado.value,
+      cep: txtCep.value
+    })
+      .then(res => {
+        alert("Usuário criado com sucesso");
+        window.open("./login.html", "_self");
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  });
 
 
 </script>
