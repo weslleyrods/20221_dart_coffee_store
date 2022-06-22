@@ -1,8 +1,10 @@
 .formulario {
-  height: 100vh;
+  height: 120vh;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;  
 }
 
 .formulario .formulario-campos {
@@ -12,8 +14,9 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--eerie-black);
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  /* border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px; */
+  border-radius: 30px;
 }
 
 .formulario .formulario-campos form {
@@ -37,7 +40,7 @@
   background-size: cover;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-}
+} 
 
 .btn-success {
   width: 100%;

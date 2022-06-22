@@ -107,7 +107,7 @@
 
   <div class="container">
     <div class="row formulario">
-      <div class="formulario-campos col-md-12 col-lg-8">
+      <div class="formulario-campos col-md-12 col-lg-9">
         <div class="row">
           <h1 class="titulo text-white">Cadastro</h1>
           <form class="d-flex" action='./address.html'>
@@ -171,6 +171,49 @@
                   placeholder="Celular (xx-xxxxx-xxxx)" maxlength="11" />
               </div>
             </div>
+            <div class="row px-3">
+              <div class="col-12 col-sm-12 col-md-12">
+                <label for="logradouro" class="form-label text-white"></label>
+                <input type="text" id="txtLogradouro" name="logradouro" class="form-control" placeholder="Logradouro"
+                  required />
+              </div>
+            </div>
+            <!--numero -->
+            <div class="row px-3">
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="numero" class="form-label text-white"></label>
+                <input type="number" pattern="[0-9]+$" id="txtNumero" name="numero" class="form-control"
+                  placeholder="Numero" required />
+              </div>
+              <!--bairro-->
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="Bairro" class="form-label text-white"></label>
+                <input type="text" pattern="[aA-zZ\s]+$" id="txtBairro" name="bairro" class="form-control"
+                  placeholder="Bairro" required />
+              </div>
+            </div>
+            <!--cidade & estado -->
+            <!-- maxlength="10" -->
+            <div class="row px-3">
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="cidade" class="form-label text-white"></label>
+                <input type="text" pattern="[aA-zZ\s]+$" id="txtCidade" name="cidade" class="form-control"
+                  placeholder="Cidade" required />
+              </div>
+              <div class="col-12 col-sm-12 col-md-6">
+                <label for="estado" class="form-label text-white"></label>
+                <input type="text" pattern="[aA-zZ\s]+$" id="txtEstado" name="estado" class="form-control"
+                  placeholder="Estado" required />
+              </div>
+            </div>
+            <!--CEP-->
+            <div class="row px-3">
+              <div class="col-12">
+                <label for="cep" class="form-label text-white"></label>
+                <input type="text" pattern="[0-9]+$" id="txtCep" name="cep" class="form-control" placeholder="CEP"
+                  maxlength="8" required />
+              </div>
+            </div>
             <!--LINK-->
             <div class="row px-3 mt-4">
               <div class="col-6">
@@ -188,15 +231,20 @@
           </form>
         </div>
       </div>
-      <div class="formulario-imagem col">
-      </div>
+      <!-- <div class="formulario-imagem col">
+      </div> -->
     </div>
   </div>
   <footer>
-    <div class="footer">
+    <div class="footer navbar-fixed-bottom">
       <p>&copy;Copyright 2022 - Dart Coffee Store</p>
     </div>
   </footer>
 </body>
 
 </html>
+
+<script lang="javascript">
+
+
+</script>

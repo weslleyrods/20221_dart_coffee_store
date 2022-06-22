@@ -1,3 +1,7 @@
+html, 
+body {
+    height: 100%;
+}
 
 body{
     background-color: white;
@@ -88,9 +92,7 @@ body{
     font-size: 1rem;
 }
 
-
-
-footer{
+/* footer{
     background-color: var(--eerie-black);
     height: 50px;
     padding: 10px;
@@ -100,7 +102,7 @@ footer{
 
 .footer p{
     color: rgba(218, 218, 218, 0.883);
-}
+} */
 
 /* Responsividade do filtro*/
 
