@@ -29,14 +29,19 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Dart Coffee Store</a>
 
-        <!--Busca geral, bloco1 -->
-        <form class="d-flex">
-          <input class="form-control me-2" type="text" id="busca" placeholder="Buscar produtos" />
+        <!--Busca geral-->
+        <div class="d-flex">
+          <input class="form-control me-2" type="text" id="busca" placeholder="Buscar produtos" onkeydown="((event)=>{
+                let keycode = event.keyCode
+                if(keycode === 13)
+                window.open(`index.html?busca=${busca.value}`, '_self')
+                
+              })(event)" />
           <button id="btn_busca" class="btn" type="button"
             onclick="window.open(`index.html?busca=${busca.value}`, '_self')">
             <i class="bi bi-search"></i>
           </button>
-        </form>
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
           <span class="navbar-toggler-icon"></span>
@@ -280,83 +285,11 @@
     const busca = urlParams.get("busca");
     if (busca !== null && busca.length > 0) {
       gerarHome(`https://dartcoffee.herokuapp.com/produto/busca/${busca}`);
+      document.querySelector('#busca').value = busca;
     } else {
       gerarHome("https://dartcoffee.herokuapp.com/produto/");
     }
   })
-
-
-
-
-  // function buscaGeral() {
-  //   let url = "https://dartcoffee.herokuapp.com/produto/"
-  //   fetch(url) //faz uma requisição/solicitação utilizando o url. Atendida ela retorna uma promise.
-  //     .then((res) => {
-  //       return res.json()
-  //     })
-  //     .then((res) => {
-  //       console.log(res);
-  //       for (let produto of res.data) {
-  //         const { titulo, valor, _id } = produto
-  //         document.querySelector("#lista-produtos").innerHTML += `
-  //             <div class="col-xl-4 col-md-6 mb-3">
-  //             <div class="produto">
-  //             <div class="icones">
-  //               <i class="bi bi-cart-plus"></i>
-  //               <i class="bi bi-heart"></i>
-  //             </div>
-  //               <img src="./assets/img/produto-soluvel.png">
-  //               <div class="nome-produto">${titulo}</div>
-  //               <button type="button" class="btn btn-sm"
-  //                 onclick="location.href='./pages/product-details.html?id=${_id}';"><b>R$ ${valor}</b> Comprar</button>
-  //             </div>
-  //             </div>
-  //             `
-  //       }
-  //     })
-  // }
-
-
-
-  // function buscarParametro() {
-  //   const input = document.querySelector("#busca")
-  //   const busca = input.value
-
-  //   let url = `https://dartcoffee.herokuapp.com/produto/busca/${busca}`;
-  //   fetch(url)
-  //     .then((res) => {
-  //       return res.json()
-  //     })
-  //     .then((res) => {
-  //       if (res.data.length <= 0) {
-  //         document.querySelector("#lista-produtos").innerHTML = `
-  //   	      <h3 align="center">Nenhum produto encontrado</h3>
-  //           `
-  //       } else {
-  //         document.querySelector("#lista-produtos").innerHTML = ``;
-  //         for (let produto of res.data) {
-  //           const { titulo, valor, _id } = produto
-  //           document.querySelector("#lista-produtos").innerHTML += `
-  //           <div class="col-xl-4 col-md-6 mb-3">
-  //           <div class="produto">
-  //           <div class="icones">
-  //             <i class="bi bi-cart-plus"></i>
-  //             <i class="bi bi-heart"></i>
-  //           </div>
-  //             <img src="./assets/img/produto-soluvel.png">
-  //             <div class="nome-produto">${titulo}</div>
-  //             <button type="button" class="btn btn-sm"
-  //               onclick="location.href='./pages/product-details.html?id=${_id}';"><b>R$ ${valor}</b> Comprar</button>
-  //           </div>
-  //           </div>
-  //           `
-  //         }
-  //       }
-  //     })
-  // }
-
-
-
 </script>
 
 </html>
