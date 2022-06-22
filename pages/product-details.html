@@ -246,10 +246,10 @@
 
         //levar o produto para outra pagina atraves do id
         //URLSearchParams: permite trabalhar com as strings da URL ex=?id=62adf590994831781c807a6d
-        const urlParams = new URLSearchParams(window.location.search);  
+        const urlParams = new URLSearchParams(window.location.search);
         //?id=62adf590994831781c807a6d
         let id = urlParams.get("id");
-        let url = `https://agile-plateau-96407.herokuapp.com/produto/${id}`;
+        let url = `https://dartcoffee.herokuapp.com/produto/${id}`;
         fetch(url)
             .then((res) => {
                 return res.json()
@@ -257,15 +257,15 @@
             .then((res) => {
                 console.log(res);
                 const { titulo, valor, descricao } = res.data
-                document.querySelector("#titulo-produto").textContent=titulo
-                document.querySelector("#preco").textContent=`R$ ${valor}`
-                document.querySelector("#descricao-produto").textContent=descricao
+                document.querySelector("#titulo-produto").textContent = titulo
+                document.querySelector("#preco").textContent = `R$ ${valor}`
+                document.querySelector("#descricao-produto").textContent = descricao
             }
-        )
+            )
 
     </script>
 
-    
+
 
 
 </body>
