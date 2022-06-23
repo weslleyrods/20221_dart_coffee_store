@@ -103,8 +103,6 @@
   </header>
 
   <!-- tentativa 02 -->
-
-
   <div class="container">
     <div class="row formulario">
       <div class="formulario-campos col-md-12 col-lg-9">
@@ -240,44 +238,37 @@
       <p>&copy;Copyright 2022 - Dart Coffee Store</p>
     </div>
   </footer>
-
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
 
 <script lang="javascript">
-
-  // teste axios
-
+  // validadar se as senhas sao iguais
   const form = document.getElementById("formCadastro");
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    axios.post("https://dartcoffee.herokuapp.com/cliente/cadastro", {
-      nome: txtNome.value,
-      sobrenome: txtSobrenome.value,
-      cpf: txtCPF.value,
-      email: txtEmail.value,
-      senha: txtSenha.value,
-      telefone: txtTelefone.value,
-      celular: txtCelular.value,
-      logradouro: txtLogradouro.value,
-      numero: txtNumero.value,
-      bairro: txtBairro.value,
-      cidade: txtCidade.value,
-      estado: txtEstado.value,
-      cep: txtCep.value
-    })
-      .then(res => {
-        alert("Usuário criado com sucesso");
-        window.open("./login.html", "_self");
-      })
-      .catch(err => {
-        console.log(err);
-      })
+    // 1º pegar os valores do input de senha e confirm senha
+    let senha = document.getElementById("txtSenha").value;
+    let confirmaSenha = document.getElementById("txtConfirmSenha").value;
+    // 2º verificar se é igual
+
+    if (senha === confirmaSenha) {
+      // 3º se for, contiuar o codigo abaixo
+      //POST com axios AQUI
+
+    }
+    // 4º se for diferente, retornar um alert falando que ta diferente as senhas
+    else {
+      alert("senhas diferentes");
+
+      // 5º limpar os campos de senha e confirmar senha
+      confirmaSenha = "";
+      senha = "";
+      // 6º colocar o foco (input.focus()) no input da senha para o usuario digitar a senha mais facil
+      document.getElementById("txtSenha").focus();
+
+    }
+
   });
-
-
 </script>
