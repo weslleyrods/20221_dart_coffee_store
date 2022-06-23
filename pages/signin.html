@@ -190,6 +190,14 @@
                   placeholder="Bairro" required />
               </div>
             </div>
+            <!--CEP-->
+            <div class="row px-3">
+              <div class="col-12">
+                <label for="cep" class="form-label text-white"></label>
+                <input type="text" pattern="[0-9]+$" id="txtCep" name="cep" class="form-control" placeholder="CEP"
+                  maxlength="8" required />
+              </div>
+            </div>
             <!--cidade & estado -->
             <!-- maxlength="10" -->
             <div class="row px-3">
@@ -200,18 +208,11 @@
               </div>
               <div class="col-12 col-sm-12 col-md-6">
                 <label for="estado" class="form-label text-white"></label>
-                <input type="text" pattern="[aA-zZ\s]+$" id="txtEstado" name="estado" class="form-control"
-                  placeholder="Estado" required />
+                <!-- a -->
+                <select class="form-control" id="txtEstado" required></select>
               </div>
             </div>
-            <!--CEP-->
-            <div class="row px-3">
-              <div class="col-12">
-                <label for="cep" class="form-label text-white"></label>
-                <input type="text" pattern="[0-9]+$" id="txtCep" name="cep" class="form-control" placeholder="CEP"
-                  maxlength="8" required />
-              </div>
-            </div>
+
             <!--LINK-->
             <div class="row px-3 mt-4">
               <div class="col-6">
@@ -244,6 +245,18 @@
 </html>
 
 <script lang="javascript">
+
+  const buscaEstadosBrasil = async () => {
+    const { data } = await axios.get("https://raw.githubusercontent.com/felipefdl/cidades-estados-brasil-json/master/Estados.json")
+    // console.log(data);
+    data.forEach(estado => {
+      document.getElementById("txtEstado").innerHTML += `
+            <option value="${estado.Nome}">${estado.Nome}</option>
+            `
+    });
+  }
+  buscaEstadosBrasil();
+
   // validadar se as senhas sao iguais
   const form = document.getElementById("formCadastro");
   form.addEventListener("submit", async (e) => {
@@ -255,20 +268,38 @@
 
     if (senha === confirmaSenha) {
       // 3º se for, contiuar o codigo abaixo
-      //POST com axios AQUI
-
+      axios.post("https://dartcoffee.herokuapp.com/cliente/cadastro", {
+        nome: txtNome.value,
+        sobrenome: txtSobrenome.value,
+        cpf: txtCPF.value,
+        email: txtEmail.value,
+        senha: txtSenha.value,
+        telefone: txtTelefone.value,
+        celular: txtCelular.value,
+        logradouro: txtLogradouro.value,
+        numero: txtNumero.value,
+        bairro: txtBairro.value,
+        cidade: txtCidade.value,
+        estado: txtEstado.value,
+        cep: txtCep.value,
+      })
+        .then(res => {
+          alert("Usuário criado com sucesso");
+          window.open("./login.html", "_self");
+        })
+        .catch(err => {
+          console.log(err);
+          alert(err.response.data.message);
+        })
     }
     // 4º se for diferente, retornar um alert falando que ta diferente as senhas
     else {
       alert("senhas diferentes");
-
       // 5º limpar os campos de senha e confirmar senha
       confirmaSenha = "";
       senha = "";
       // 6º colocar o foco (input.focus()) no input da senha para o usuario digitar a senha mais facil
       document.getElementById("txtSenha").focus();
-
     }
-
   });
 </script>
