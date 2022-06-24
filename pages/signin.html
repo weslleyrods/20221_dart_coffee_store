@@ -51,28 +51,29 @@
         <div class="offcanvas offcanvas-end" id="demo">
           <div class="offcanvas-header">
             <div class="offcanvas-title">
-              <img src="../assets/img/foto-usuario.png" alt="Logo" style="width:40px;" class="rounded-pill">
+              <img src="../assets/img/foto-usuario.png" alt="Logo" style="width: 40px" class="rounded-pill" />
+              <span id="nomeUsuario"></span>
             </div>
             <i class="bi bi-x-lg" data-bs-dismiss="offcanvas"></i>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav" align="center">
-              <li class="nav-item">
+              <li class="nav-item" id="btnEntrar">
                 <i class="bi bi-box-arrow-in-right"></i>
                 <div class="menu-link">
-                  <a class="nav-link" href="../pages/login.html">Entrar</a>
+                  <a class="nav-link" href="./login.html">Entrar</a>
                 </div>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="btnCadastrar">
                 <i class="bi bi-person-badge"></i>
                 <div class="menu-link">
-                  <a class="nav-link" href="../pages/signin.html">Cadastrar</a>
+                  <a class="nav-link" href="./signin.html">Cadastrar</a>
                 </div>
               </li>
               <li class="nav-item">
                 <i class="bi bi-cart4"></i>
                 <div class="menu-link">
-                  <a class="nav-link" href="../pages/cart.html">Carrinho</a>
+                  <a class="nav-link" href="./cart.html">Carrinho</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -95,8 +96,8 @@
               </li>
             </ul>
           </div>
-          <div class="offcanvas-body-button">
-            <button class="btn" type="button">Sair</button>
+          <div class="offcanvas-body-button" id="btnSair">
+            <button class="btn text-white" type="button">Sair</button>
           </div>
         </div>
     </nav>
@@ -240,6 +241,7 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../assets/js/index.js"></script>
 </body>
 
 </html>

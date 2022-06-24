@@ -34,6 +34,7 @@ header .d-flex input {
 .offcanvas-header {
   background-color: var(--eerie-black);
   padding: 0.5rem;
+  color: white;
 }
 
 .offcanvas-header i {
@@ -89,6 +90,7 @@ header .d-flex input {
 .offcanvas-body-button {
   background-color: var(--eerie-black);
   text-align: center;
+  display: none;
 }
 
 .offcanvas-body-button .btn {
