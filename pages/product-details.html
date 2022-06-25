@@ -69,25 +69,25 @@
                                     <a class="nav-link" href="./signin.html">Cadastrar</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="btnCarrinho">
                                 <i class="bi bi-cart4"></i>
                                 <div class="menu-link">
                                     <a class="nav-link" href="./cart.html">Carrinho</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="btnMeusPedidos">
                                 <i class="bi bi-bag-check"></i>
                                 <div class="menu-link">
                                     <a class="nav-link" href="#">Meus Pedidos</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="btnListaDesejos">
                                 <i class="bi bi-heart-fill"></i>
                                 <div class="menu-link">
                                     <a class="nav-link" href="#">Lista de Desejos</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" id="btnContato">
                                 <i class="bi bi-envelope-plus"></i>
                                 <div class="menu-link">
                                     <a class="nav-link" href="#">Contato</a>
@@ -207,22 +207,21 @@
 
                 </div>
                 <div id="botao" class="col-12 col-md-5">
-                    <div class="qtd-produto">
+                    <!-- <div class="qtd-produto">
                         <i class="bi bi-dash-circle-fill" onclick="less()"></i>
-                        <!-- <label id="labelCart" class="rotulo">1</label> -->
                         <input id="labelCart" type="text" class="rotulo" value="1" readonly>
                         <i class="bi bi-plus-circle-fill" onclick="more()"></i>
-                    </div>
-                    <button class="btn">Comprar</button>
-                    <button class="btn btn-opacity">Adicionar ao carrinho</button>
+                    </div> -->
+                    <button class="btn" onclick="addCarinho(false)">Comprar</button>
+                    <button class="btn btn-opacity" onclick="addCarinho(true)">Adicionar ao carrinho</button>
                 </div>
                 <div id="descricao" class="col-12 col-md-7">
                     <div class="descricao-texto">
                         <p id="descricao-produto">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat totam explicabo
-                            dolorum ex molestiae excepturi culpa eveniet. Quod assumenda aspernatur quae nostrum saepe
-                            quo
-                            asperiores explicabo! Maxime, atque corporis!
+                            dolorum ex molestiae excepturi culpa eveniet.
+                            Quod assumenda aspernatur quae nostrum saepe quo asperiores explicabo! Maxime, atque
+                            corporis!
                         </p>
                     </div>
                 </div>
@@ -254,7 +253,6 @@
         //levar o produto para outra pagina atraves do id
         //URLSearchParams: permite trabalhar com as strings da URL ex=?id=62adf590994831781c807a6d
         const urlParams = new URLSearchParams(window.location.search);
-        //?id=62adf590994831781c807a6d
         let id = urlParams.get("id");
         let url = `https://dartcoffee.herokuapp.com/produto/${id}`;
         fetch(url)
@@ -270,10 +268,34 @@
             }
             )
 
+        // adicionar item ao carrinho
+
+        function addCarinho(alertar) {
+            let url = `https://dartcoffee.herokuapp.com/carrinho/add/`;
+            let idProduto = urlParams.get("id");
+            let idCarrinho = JSON.parse(localStorage.getItem("usuario_logado")).carrinho;
+            axios
+                .put(url, {
+                    id_carrinho: idCarrinho,
+                    id_produto: idProduto,
+                })
+                .then(() => {
+
+                    if (alertar) {
+                        alert("Produto adicionado no carrinho");
+                    } else {
+                        window.open("/pages/cart.html", "_self");
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                    alert(err.message);
+                });
+        }
+
     </script>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../assets/js/index.js"></script>
 </body>
 

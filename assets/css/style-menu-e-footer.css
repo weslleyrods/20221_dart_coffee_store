@@ -44,6 +44,12 @@ header .d-flex input {
   font-size: 1.5rem;
 }
 
+#btnMeusPedidos,
+#btnListaDesejos,
+#btnContato{
+ display: none;
+}
+
 .offcanvas-header i:hover {
   color: var(--gold-metallic);
 }
@@ -65,8 +71,6 @@ header .d-flex input {
   color: white;
   justify-content: space-between;
 }
-
-
 
 .offcanvas-body .menu-link {
   display: flex;

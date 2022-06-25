@@ -2,6 +2,7 @@ const ls = localStorage;
 let sair = document.getElementById("btnSair"); // block
 let cadastrar = document.getElementById("btnCadastrar"); // flex
 let entrar = document.getElementById("btnEntrar"); // flex
+let carrinho = document.getElementById("btnCarrinho"); // flex
 let nomeUsuario = document.getElementById("nomeUsuario"); // inline
 
 window.addEventListener("load", () => {
@@ -11,11 +12,13 @@ window.addEventListener("load", () => {
     sair.style.display = `block`;
     cadastrar.style.display = `none`;
     entrar.style.display = `none`;
+    carrinho.style.display = `flex`;
   } catch (e) {
     sair.style.display = "none";
     cadastrar.style.display = "flex";
     entrar.style.display = "flex";
     nomeUsuario.textContent = "";
+    carrinho.style.display = `none`;
   }
 });
 
@@ -28,5 +31,3 @@ sair.addEventListener("click", async () => {
     console.log(e);
   }
 });
-
-// colocar o script em todas as telas
