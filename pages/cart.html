@@ -123,89 +123,11 @@
                     <p>
                     <p>
                         <!-- inicio da coluna de pedidos -->
-                    <div class="col-lg-8 col-md-12 col-sm-12">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div id="prod_total">
-                                    <div class="produto">
-                                        <img src="../assets/img/produto1-5.png">
-                                    </div>
-                                    <div id="botao" class="qtd-produto">
-                                        <i class="bi bi-dash" onclick="less()"></i>
-                                        <input id="labelCart" type="text" class="rotulo" value="1" readonly>
-                                        <i class="bi bi-plus" onclick="more()"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-6">
-                                <div class="row">
-                                    <div id="nome-produto">
-                                        Torrado e Moído Mogiana Pouch 250g
-                                    </div>
-                                    <div class="descricao descricao-texto">
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat
-                                            totam explicabo dolorum ex molestiae excepturi culpa eveniet. Quod assumenda
-                                            aspernatur quae nostrum saepe quo asperiores explicabo! Maxime, atque
-                                            corporis!
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <div id="remover" class="col-6">
-                                            Remover este produto
-                                        </div>
-                                        <div id="preco" class="col-6">
-                                            R$ 57,97
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                <div id="prod_total">
-                                    <div class="produto">
-                                        <img src="../assets/img/produto-graos.png">
-                                    </div>
-                                    <div id="botao" class="qtd-produto">
-                                        <i class="bi bi-dash" onclick="less()"></i>
-                                        <input id="labelCart" type="text" class="rotulo" value="1">
-                                        <i class="bi bi-plus" onclick="more()"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-6">
-                                <div class="row" id="info-produtos">
-                                    <div id="nome-produto">
-                                        Forza Grãos 500g
-                                    </div>
-                                    <div class="descricao descricao-texto">
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat
-                                            totam explicabo dolorum ex molestiae excepturi culpa eveniet. Quod assumenda
-                                            aspernatur quae nostrum saepe quo asperiores explicabo! Maxime, atque
-                                            corporis!
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <div id="remover" class="col-6">
-                                            Remover este produto
-                                        </div>
-                                        <div id="preco" class="col-6">
-                                            R$ 67,97
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class=" col-md-8 col-sm-12" id="lista-carrinho">
                     </div>
-
                     <!-- fim da coluna de pedidos -->
-
-
                     <!-- inicio da coluna do resumo -->
-
-                    <div id="resumo_pedido" class="col-lg-8 col-md-12 col-sm-12 w-100">
+                    <div id="resumo_pedido" class="col-md-4 col-sm-12 w-100">
                         <div class="descricao descricao-texto">
                             <div id="titulo_resumo">
                                 <div class="row">
@@ -255,14 +177,86 @@
     </footer>
     </div>
     <script src="../assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
 
 <script lang="javascript">
+    // const urlParams = new URLSearchParams(window.location.search);
+    // let id = urlParams.get("id");
 
+    let idCarrinho = JSON.parse(localStorage.getItem("usuario_logado")).carrinho
+    let url = `https://dartcoffee.herokuapp.com/produto/carrinho/${idCarrinho}`;
+    console.log(idCarrinho);
+    console.log(url);
+    axios.get(url)
+        .then((res) => {
+            return res.data
+        })
+        .then((res) => {
 
+            for (let produto of res.data) {
+                const { titulo, valor, descricao, _id } = produto
 
+                document.querySelector("#lista-carrinho").innerHTML +=
+                    `
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                    <div id="prod_total">
+                        <div class="produto">
+                            <img src="../assets/img/produto1-5.png">
+                        </div>
+                        
+                    </div>
+                        </div>
+                            <div class="col-md-8 col-sm-6">
+                                <div class="row">
+                                    <div id="nome-produto">
+                                        ${titulo}
+                                    </div>
+                                <div class="descricao descricao-texto" id="descricao-produto">
+                                    <p>
+                                        ${descricao}
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <div style="cursor: pointer" onclick="removerCarrinho('${_id}')" id="remover" class="col-6">
+                                        Remover
+                                </div>
+                                <div id="preco" class="col-6">
+                                    R$ ${valor}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `
+            }
+        })
 
+    function removerCarrinho(idProduto) {
+        // 1. pegar o id do carrinho do localstorage
+        let idCarrinho = JSON.parse(localStorage.getItem("usuario_logado")).carrinho
 
+        // 2. monter UM objeto json com id_produto, id_carrinho
+        const body = {
+            id_produto: idProduto,
+            id_carrinho: idCarrinho
+        }
+        // 3. fazer a requisicao via put axios passando o objeto json como body
+        // https://dartcoffee.herokuapp.com/carrinho/remove
+        axios.put("https://dartcoffee.herokuapp.com/carrinho/remove", body
+        )
+            // 4. se removeu, dar um alert informando a removo e recarregar (/pages/cart.html)
+            .then(() => {
+                alert("remoção realiza com sucesso")
+                window.open("/pages/cart.html", "_self")
+            })
+            // 5. se não removeu, alert pedindo para tentar novamente e não recarrega a pagina
+            .catch((err) => {
+                alert("tente novamente ...")
+                console.log(err)
+            })
+    }
 </script>
