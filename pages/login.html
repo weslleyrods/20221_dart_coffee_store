@@ -35,11 +35,11 @@
           <input class="form-control me-2" type="text" id="busca" placeholder="Buscar produtos" onkeydown="((event)=>{
                 let keycode = event.keyCode
                 if(keycode === 13)
-                window.open(`/index.html?busca=${busca.value}`, '_self')
+                window.open(`/20221_dart_coffee_store/index.html?busca=${busca.value}`, '_self')
                 
               })(event)" />
           <button id="btn_busca" class="btn" type="button"
-            onclick="window.open(`/index.html?busca=${busca.value}`, '_self')">
+            onclick="window.open(`/20221_dart_coffee_store/index.html?busca=${busca.value}`, '_self')">
             <i class="bi bi-search"></i>
           </button>
         </div>
@@ -180,7 +180,7 @@
             //lógica do LS
             localStorage.setItem("usuario_logado", JSON.stringify(res.data.data));
             // 4.2: redirecionar o usuário para a home
-            window.open("/index.html", "_self");
+            window.open("/20221_dart_coffee_store/index.html", "_self");
 
           } else {
             // 5 false: usuario informou as credenciais erradas

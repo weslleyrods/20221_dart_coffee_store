@@ -44,11 +44,11 @@
                     <input class="form-control me-2" type="text" id="busca" placeholder="Buscar produtos" onkeydown="((event)=>{
                           let keycode = event.keyCode
                           if(keycode === 13)
-                          window.open(`/index.html?busca=${busca.value}`, '_self')
+                          window.open(`/20221_dart_coffee_store/index.html?busca=${busca.value}`, '_self')
                           
                         })(event)" />
                     <button id="btn_busca" class="btn" type="button"
-                        onclick="window.open(`/index.html?busca=${busca.value}`, '_self')">
+                        onclick="window.open(`/20221_dart_coffee_store/index.html?busca=${busca.value}`, '_self')">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
@@ -251,7 +251,7 @@
             // 4. se removeu, dar um alert informando a removo e recarregar (/pages/cart.html)
             .then(() => {
                 alert("remoção realiza com sucesso")
-                window.open("/pages/cart.html", "_self")
+                window.open("/20221_dart_coffee_store/pages/cart.html", "_self")
             })
             // 5. se não removeu, alert pedindo para tentar novamente e não recarrega a pagina
             .catch((err) => {
