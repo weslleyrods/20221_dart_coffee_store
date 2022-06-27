@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
 sair.addEventListener("click", async () => {
   try {
     localStorage.removeItem("usuario_logado");
-    window.open("/index.html", "_self");
+    window.open("/20221_dart_coffee_store/index.html", "_self");
   } catch (e) {
     alert("Erro ao fazer logoff, tente novamente.");
     console.log(e);
